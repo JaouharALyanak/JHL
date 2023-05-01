@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHL</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.min.css">
+    <link rel="stylesheet" href="./assets/css/gradientbgmv.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="metodoviral-gradient">
+        <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
+    </div>
+
+    <header class="mainheader">
+        <div class="container">
+            <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" src="./assets/images/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainmenu">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item"> <a class="nav-link" href="#"> Qui somme nous </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Services </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Projet </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Contacte </a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        
+        <section class="mainslider">
+            <div class="container">
+                <div class="col-md-10 mx-auto px-0">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="bnr-caption">
+                                <span id="typpedCaption"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="promo-card col-md-10 ms-auto pt-md-4">
+                                <span class="badge"> Offers</span>
+                                <div id="typed-strings" class="d-none">
+                                    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                                    <p>It <em>types</em> out sentences.</p>
+                                </div>
+                                <div class="promo-content">
+                                    <span id="typed"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="services-slider">
+                            <div class="slides-wrapper ps-4 py-4">
+                                <span class="pseudo-start">
+                                    <img class="pseudo-ball" src="./assets/images/ball.png" alt="">
+                                </span>
+                                <div class="slides-carousel">
+                                    <div>
+                                        <div class="row mx-auto"> 
+                                            <div class="col-md-4">
+                                                <img class="img-fluid cover" src="./assets/images/web-design.jpg" alt="">
+                                            </div>
+                                            <div class="col-md-8 content py-4 ps-md-5">
+                                                <h2 class="service-title"> Web Design </h2>
+                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="row mx-auto"> 
+                                            <div class="col-md-4">
+                                                <img class="img-fluid cover" src="./assets/images/graphic-design.jpg" alt="">
+                                            </div>
+                                            <div class="col-md-8 content py-4 ps-md-5">
+                                                <h2 class="service-title"> Graphic design </h2>
+                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                <ul class="nav mt-5">
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/illustrator.png" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/photoshop.png" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/xd.png" alt=""> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="row mx-auto"> 
+                                            <div class="col-md-4">
+                                                <img class="img-fluid cover" src="./assets/images/marketing.jpg" alt="">
+                                            </div>
+                                            <div class="col-md-8 content py-4 ps-md-5">
+                                                <h2 class="service-title"> Marketing </h2>
+                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="pseudo-end"></span>
+                        </div>
+                        <div class="thumb-slider py-4 px-4">
+                            <ul class="nav" id="thumbSlider">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-index="0" href="#"> Web design </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-index="1" href="#"> Graphic design </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-index="2" href="#"> Marketing </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-style-1">
+                            <div class="content">
+                                <h2 class="counter"> 4 years </h2> of magic
+                            </div>
+                            <img class="img-br" src="./assets/images/thumbs-up.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aboutus sp-1 bg-shadow-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 cms-block">
+                        <h2 class="title"> Who we are ?</h2>
+                        <div class="cms-content">
+                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
+                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
+                            <button class="btn btn-primary"> View more </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ms-auto">
+                        <img class="img-fluid" src="./assets/images/working.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects sp-1 bg-shadow-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto mx-auto mb-5">
+                        <h2 class="sec-title"> Our Last Projects </h2>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6 cms-block">
+                        <h2 class="title"> Jibna, delivery platform</h2>
+                        <div class="cms-content">
+                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
+                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
+                            <button class="btn btn-primary"> View more </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ms-auto">
+                        <div class="titris-image">
+                            <div class="level1 a-scroll">
+                                <img src="./assets/images/jibna.jpg" alt="">
+                            </div>
+                            <div class="level2 a-scroll speed-100">
+                                <img src="./assets/images/jibna_mobile.jpg" alt="">
+                            </div>
+                            <!-- <div class="level3"></div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-5 me-auto">
+                        <div class="titris-image">
+                            <div class="level1 a-scroll">
+                                <img src="./assets/images/methc.jpg" alt="">
+                            </div>
+                            <div class="level2 a-scroll speed-100">
+                                <img src="./assets/images/methc_mobile.jpg" alt="">
+                            </div>
+                            <!-- <div class="level3"></div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 cms-block">
+                        <h2 class="title"> Methc, Medical Equipment & Technology of HealthCare</h2>
+                        <div class="cms-content">
+                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
+                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
+                            <button class="btn btn-primary"> View more </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-6 cms-block">
+                        <h2 class="title"> Awman productions</h2>
+                        <div class="cms-content">
+                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
+                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
+                            <button class="btn btn-primary"> View more </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ms-auto">
+                        <div class="titris-image">
+                            <div class="level1 a-scroll">
+                                <img src="./assets/images/awmanpro.jpg" alt="">
+                            </div>
+                            <div class="level2 a-scroll speed-100">
+                                <img src="./assets/images/awmanpro_mobile.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contactus sp-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 cms-block offset-md-1">
+                        <span class="badge">Contact</span>
+                        <h2 class="title mt-4 mb-5"> 
+                            Any quastions ? <br>
+                            Write or call us. <br>
+                            We will write back within 12h
+                        </h2>
+                        <div class="cms-content">
+                            <a class="text-reset me-3" href="tel:0652544556"> (+212) 652 54 45 56</a> .
+                            <a class="text-reset ms-3" href=""> Contact@jhl.com </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName" class="form-label"> Name</label>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="form-label"> Phone</label>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="form-label"> Email</label>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="form-label"> Subject</label>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" name="inputName" id="inputName" placeholder="">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="" class="form-label">Message</label>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="py-3 m-0"> All Right reserved 2023</p>
+        </div>
+    </footer>
+    <!-- <div id='metodoviral-gradient-diagonal'><canvas id='gradient-canvas-diagonal'
+        data-js-darken-top data-transition-in></canvas>
+    </div> -->
+
+    <script src="./assets/js/jquery-3.6.4.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gradientbgmv.js"></script>
+    <script src="./assets/js/typed.min.js"></script>
+    <!-- <script src="./assets/js/gradientbgmvdiagonal.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
