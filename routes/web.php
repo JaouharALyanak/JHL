@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index');
+Route::post('/contact.html', [ ContactController::class ,'send'])->name('contact.send');
+

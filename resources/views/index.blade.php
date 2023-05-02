@@ -256,7 +256,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 offset-md-1">
-                        <form>
+                        <form action="{{route('contact.send')}}" method="post"> @csrf
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Name</label>
                                 <div class="mb-3">
