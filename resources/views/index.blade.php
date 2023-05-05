@@ -19,10 +19,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JHL</title>
 
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/slick.min.css">
-    <link rel="stylesheet" href="./assets/css/gradientbgmv.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/gradientbgmv.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
 </head>
 <body>
     <div id="metodoviral-gradient">
@@ -33,7 +34,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="./assets/images/logo.svg" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/images/logo.svg') }}" alt="">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +53,7 @@
     </header>
 
     <main id="mainContent">
-        
+
         <section class="mainslider">
             <div class="container">
                 <div class="col-md-10 mx-auto px-0">
@@ -87,13 +88,13 @@
                         <div class="services-slider">
                             <div class="slides-wrapper ps-4 py-4">
                                 <span class="pseudo-start">
-                                    <img class="pseudo-ball" src="./assets/images/ball.png" alt="">
+                                    <img class="pseudo-ball" src="{{ asset('assets/images/ball.png') }}" alt="">
                                 </span>
                                 <div class="slides-carousel">
                                     <div>
-                                        <div class="row mx-auto"> 
+                                        <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="./assets/images/web-design.jpg" alt="">
+                                                <img class="img-fluid cover" src="{{ asset('assets/images/web-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Web Design </h2>
@@ -103,26 +104,26 @@
                                     </div>
 
                                     <div>
-                                        <div class="row mx-auto"> 
+                                        <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="./assets/images/graphic-design.jpg" alt="">
+                                                <img class="img-fluid cover" src="{{ asset('assets/images/graphic-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Graphic design </h2>
                                                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
                                                 <ul class="nav mt-5">
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/illustrator.png" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/photoshop.png" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="./assets/images/xd.png" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/illustrator.png') }}" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/photoshop.png') }}" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/xd.png') }}" alt=""> </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div class="row mx-auto"> 
+                                        <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="./assets/images/marketing.jpg" alt="">
+                                                <img class="img-fluid cover" src="{{ asset('assets/images/marketing.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Marketing </h2>
@@ -153,7 +154,7 @@
                             <div class="content">
                                 <h2 class="counter"> 4 years </h2> of magic
                             </div>
-                            <img class="img-br" src="./assets/images/thumbs-up.png" alt="">
+                            <img class="img-br" src="{{ asset('assets/images/thumbs-up.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -172,7 +173,7 @@
                         </div>
                     </div>
                     <div class="col-md-5 ms-auto">
-                        <img class="img-fluid" src="./assets/images/working.png" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/images/working.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -197,10 +198,10 @@
                     <div class="col-md-5 ms-auto">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="./assets/images/jibna.jpg" alt="">
+                                <img src="{{ asset('assets/images/jibna.jpg') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="./assets/images/jibna_mobile.jpg" alt="">
+                                <img src="{{ asset('assets/images/jibna_mobile.jpg') }}" alt="">
                             </div>
                             <!-- <div class="level3"></div> -->
                         </div>
@@ -211,10 +212,10 @@
                     <div class="col-md-5 me-auto">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="./assets/images/methc.jpg" alt="">
+                                <img src="{{ asset('assets/images/methc.jpg') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="./assets/images/methc_mobile.jpg" alt="">
+                                <img src="{{ asset('assets/images/methc_mobile.jpg') }}" alt="">
                             </div>
                             <!-- <div class="level3"></div> -->
                         </div>
@@ -242,10 +243,10 @@
                     <div class="col-md-5 ms-auto">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="./assets/images/awmanpro.jpg" alt="">
+                                <img src="{{ asset('assets/images/awmanpro.jpg') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="./assets/images/awmanpro_mobile.jpg" alt="">
+                                <img src="{{ asset('assets/images/awmanpro_mobile.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -259,7 +260,7 @@
                 <div class="row">
                     <div class="col-md-4 cms-block offset-md-1">
                         <span class="badge">Contact</span>
-                        <h2 class="title mt-4 mb-5"> 
+                        <h2 class="title mt-4 mb-5">
                             Any quastions ? <br>
                             Write or call us. <br>
                             We will write back within 12h
@@ -270,36 +271,61 @@
                         </div>
                     </div>
                     <div class="col-md-4 offset-md-1">
-                        <form>
+                        <form id="formContact" action="{{route('contact.send')}}" method="post"> @csrf
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Name</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="inputName" placeholder="">
+                                    @error('name')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Phone</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="inputName" placeholder="">
+                                    @error('tel')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Email</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputName" placeholder="">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Subject</label>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="email" class="form-control @error('subject') is-invalid @enderror" name="subject" id="inputName" placeholder="">
+                                    @error('subject')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="" class="form-label">Message</label>
+                                <label for="cmessage" class="form-label">Message</label>
                                 <div class="mb-3">
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    <textarea class="form-control @error('message') is-invalid @enderror" name="message" id="cmessage" rows="3"></textarea>
+                                    @error('message')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -311,7 +337,7 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
     <footer class="footer">
@@ -319,16 +345,26 @@
             <p class="py-3 m-0"> All Right reserved 2023</p>
         </div>
     </footer>
-    <!-- <div id='metodoviral-gradient-diagonal'><canvas id='gradient-canvas-diagonal'
-        data-js-darken-top data-transition-in></canvas>
-    </div> -->
 
-    <script src="./assets/js/jquery-3.6.4.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/gradientbgmv.js"></script>
-    <script src="./assets/js/typed.min.js"></script>
-    <!-- <script src="./assets/js/gradientbgmvdiagonal.js"></script> -->
-    <script src="./assets/js/script.js"></script>
+    {{-- <div id='metodoviral-gradient-diagonal'><canvas id='gradient-canvas-diagonal'
+        data-js-darken-top data-transition-in></canvas>
+    </div> --}}
+
+    <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/gradientbgmv.js') }}"></script>
+    <script src="{{ asset('assets/js/typed.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/gradientbgmvdiagonal.js') }}"></script>  --}}
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+
+    @if ($errors->any())
+    <script>
+        $(document).ready(function () {
+            $(window).scrollTop( $('#formContact').offset().top - 40);
+        })
+    </script>
+    @endif
+
 </body>
 </html>
