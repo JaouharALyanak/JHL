@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index');
-Route::post('/contact.html', [ ContactController::class ,'send'])->name('contact.send');
+Route::post('contact', [ ContactController::class ,'send'])->name('contact.send');
 

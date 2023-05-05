@@ -1,12 +1,13 @@
 <x-mail::message>
-# Introduction
 
-The body of your message.
+<strong>Sujet: </strong>{{$form['subject']}} <br>
+<strong>Nom Prenom: </strong>{{$form['name']}} <br>
+<strong>Email: </strong>{{$form['email']}} <br>
+@if (!empty($form['societe'])) <strong>Société: </strong>{{$form['societe']}} <br> @endif
+<strong>Telephone: </strong>{{$form['tel']}} <br>
+<strong>Message: </strong>{{$form['message']}} <br>
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+Cordialement,<br>
 
-Thanks,<br>
 {{ config('app.name') }}
 </x-mail::message>

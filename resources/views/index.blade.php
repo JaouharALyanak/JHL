@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/gradientbgmv.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
 </head>
 <body>
     <div id="metodoviral-gradient">
@@ -256,36 +257,61 @@
                         </div>
                     </div>
                     <div class="col-md-4 offset-md-1">
-                        <form action="{{route('contact.send')}}" method="post"> @csrf
+                        <form id="formContact" action="{{route('contact.send')}}" method="post"> @csrf
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Name</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="inputName" placeholder="">
+                                    @error('name')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Phone</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="inputName" placeholder="">
+                                    @error('tel')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Email</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputName" placeholder="">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Subject</label>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" name="inputName" id="inputName" placeholder="">
+                                    <input type="email" class="form-control @error('subject') is-invalid @enderror" name="subject" id="inputName" placeholder="">
+                                    @error('subject')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="" class="form-label">Message</label>
+                                <label for="cmessage" class="form-label">Message</label>
                                 <div class="mb-3">
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    <textarea class="form-control @error('message') is-invalid @enderror" name="message" id="cmessage" rows="3"></textarea>
+                                    @error('message')
+                                        <div class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -317,5 +343,14 @@
     <script src="{{ asset('assets/js/typed.min.js') }}"></script>
     {{-- <script src="{{ asset('assets/js/gradientbgmvdiagonal.js') }}"></script>  --}}
     <script src="{{ asset('assets/js/script.js') }}"></script>
+
+    @if ($errors->any())
+    <script>
+        $(document).ready(function () {
+            $(window).scrollTop( $('#formContact').offset().top - 40);
+        })
+    </script>
+    @endif
+
 </body>
 </html>

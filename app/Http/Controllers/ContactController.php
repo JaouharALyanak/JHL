@@ -3,9 +3,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Mail\ContactMail;
-use Mail;
 use Validator;
 use App\Rules\Recaptcha;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -13,16 +13,17 @@ class ContactController extends Controller
 	public function send(Request $req) {
 
         $rules = [
-	        'name'=>'required',
+            'name'=>'required',
             'tel'=>'required',
             'email'=>'required|email',
+            'subject'=>'required',
             'message'=>'required|string',
             'recap2secure' => [ 'required', new Recaptcha ]
         ];
 
 	    $req->validate($rules);
 
-		$data =[
+		$data = [
 		    'name'=> $req->get('name'),
 			'email'=> $req->get('email'),
 			'tel'=> $req->get('tel'),
@@ -32,8 +33,8 @@ class ContactController extends Controller
 
         try{
             Mail::send(new ContactMail($data));
-		}catch(Exception $e){
-		    return response()->json(['message' => 'adresse mail incorrect', 'status' => false],200);
+		}catch(Exception $e) {
+            return redirect()->back()->withErrors([ 'message' => $e->getMessage() ]);
 		}
 
 		request()->session()->flash('msg_thanks', md5(time()) );
