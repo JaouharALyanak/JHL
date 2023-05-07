@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
         }
 
         app()->bind('path.public', function() {
-            $path = str_replace('JHL', '', base_path());
+            $path = str_replace('bestprofil', '', base_path());
             return $path.'public_html';
         });
     }

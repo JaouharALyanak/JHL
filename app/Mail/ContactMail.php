@@ -28,7 +28,7 @@ class ContactMail extends Mailable
      */
     public function envelope(): Envelope
     {
-        $emails = [ 'contact@sowi-web.com' ];
+        $emails = [ 'contact@jhl.ma' ];
         return new Envelope(
             subject: config('app.name') . ' - Contact Form',
             from: new Address(config('mail.from.address'), config('mail.from.name')),
