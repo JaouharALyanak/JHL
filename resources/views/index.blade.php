@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>JHL</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/gradientbgmv.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
 
+    @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
 </head>
 <body>
     <div id="metodoviral-gradient">
         <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
     </div>
 
+
     <header class="mainheader">
-        <div class="container">
-            <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="{{ asset('assets/images/logo.svg') }}" alt="">
+                    <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="">
                 </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu"
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#pageMenu" aria-controls="pageMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainmenu">
+                <div class="collapse navbar-collapse" id="pageMenu">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item"> <a class="nav-link" href="#"> Qui somme nous </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> About Us </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#"> Services </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Projet </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Contacte </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Projects </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Contact Us </a> </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main id="mainContent">
@@ -52,7 +55,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="promo-card col-md-10 ms-auto pt-md-4">
-                                <span class="badge"> Offers</span>
+                                <span class="badge"> Our deals </span>
                                 <div id="typed-strings" class="d-none">
                                     <p>Typed.js is a <strong>JavaScript</strong> library.</p>
                                     <p>It <em>types</em> out sentences.</p>
@@ -72,15 +75,15 @@
                 <div class="row">
                     <div class="col-md-9">
                         <div class="services-slider">
-                            <div class="slides-wrapper ps-4 py-4">
+                            <div class="slides-wrapper ps-md-4 py-4">
                                 <span class="pseudo-start">
-                                    <img class="pseudo-ball" src="{{ asset('assets/images/ball.png') }}" alt="">
+                                    <img class="pseudo-ball" src="{{asset('assets/images/ball.png') }}" alt="">
                                 </span>
                                 <div class="slides-carousel">
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="{{ asset('assets/images/web-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/web-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Web Design </h2>
@@ -92,15 +95,15 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="{{ asset('assets/images/graphic-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/graphic-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Graphic design </h2>
                                                 <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
                                                 <ul class="nav mt-5">
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/illustrator.png') }}" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/photoshop.png') }}" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{ asset('assets/images/xd.png') }}" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/illustrator.png') }}" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/photoshop.png') }}" alt=""> </li>
+                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/xd.png') }}" alt=""> </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -109,7 +112,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover" src="{{ asset('assets/images/marketing.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/marketing.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Marketing </h2>
@@ -121,7 +124,7 @@
                             </div>
                             <span class="pseudo-end"></span>
                         </div>
-                        <div class="thumb-slider py-4 px-4">
+                        <div class="thumb-slider p-md-4 p-2">
                             <ul class="nav" id="thumbSlider">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-index="0" href="#"> Web design </a>
@@ -140,7 +143,7 @@
                             <div class="content">
                                 <h2 class="counter"> 4 years </h2> of magic
                             </div>
-                            <img class="img-br" src="{{ asset('assets/images/thumbs-up.png') }}" alt="">
+                            <img class="img-br lazyload" loading="lazy" width="180" height="280" data-src="{{asset('assets/images/thumbs-up.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -150,7 +153,7 @@
         <section class="aboutus sp-1 bg-shadow-1">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 cms-block">
+                    <div class="col-md-6 cms-block order-md-1 order-2">
                         <h2 class="title"> Who we are ?</h2>
                         <div class="cms-content">
                             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
@@ -158,8 +161,8 @@
                             <button class="btn btn-primary"> View more </button>
                         </div>
                     </div>
-                    <div class="col-md-5 ms-auto">
-                        <img class="img-fluid" src="{{ asset('assets/images/working.png') }}" alt="">
+                    <div class="col-md-5 ms-auto order-md-2 order-1 mb-md-0 mb-4">
+                        <img class="img-fluid lazyload" loading="lazy" width="500" height="460" data-src="{{asset('assets/images/working.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -169,11 +172,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-auto mx-auto mb-5">
-                        <h2 class="sec-title"> Our Last Projects </h2>
+                        <h2 class="sec-title text-center"> Our Last Projects </h2>
                     </div>
                 </div>
                 <div class="row align-items-center">
-                    <div class="col-md-6 cms-block">
+                    <div class="col-md-6 cms-block order-md-1 order-2">
                         <h2 class="title"> Jibna, delivery platform</h2>
                         <div class="cms-content">
                             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
@@ -181,15 +184,14 @@
                             <button class="btn btn-primary"> View more </button>
                         </div>
                     </div>
-                    <div class="col-md-5 ms-auto">
+                    <div class="col-md-5 ms-auto order-md-2 order-1">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="{{ asset('assets/images/jibna.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/jibna.jpg') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="{{ asset('assets/images/jibna_mobile.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/jibna_mobile.jpg') }}" alt="">
                             </div>
-                            <!-- <div class="level3"></div> -->
                         </div>
                     </div>
                 </div>
@@ -198,12 +200,11 @@
                     <div class="col-md-5 me-auto">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="{{ asset('assets/images/methc.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/methc.jpg') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="{{ asset('assets/images/methc_mobile.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/methc_mobile.jpg') }}" alt="">
                             </div>
-                            <!-- <div class="level3"></div> -->
                         </div>
                     </div>
                     <div class="col-md-6 cms-block">
@@ -218,7 +219,7 @@
 
 
                 <div class="row align-items-center mt-5">
-                    <div class="col-md-6 cms-block">
+                    <div class="col-md-6 cms-block order-md-1 order-2">
                         <h2 class="title"> Awman productions</h2>
                         <div class="cms-content">
                             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
@@ -226,13 +227,13 @@
                             <button class="btn btn-primary"> View more </button>
                         </div>
                     </div>
-                    <div class="col-md-5 ms-auto">
+                    <div class="col-md-5 ms-auto order-md-2 order-1">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img src="{{ asset('assets/images/awmanpro.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/awmanpro.jpg')}}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img src="{{ asset('assets/images/awmanpro_mobile.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/awmanpro_mobile.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -241,12 +242,13 @@
             </div>
         </section>
 
+
         <section class="contactus sp-1">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 cms-block offset-md-1">
+                    <div class="col-md-4 cms-block offset-md-1 mb-md-0 mb-5">
                         <span class="badge">Contact</span>
-                        <h2 class="title mt-4 mb-5">
+                        <h2 class="title mt-4 mb-md-5 mb-4">
                             Any quastions ? <br>
                             Write or call us. <br>
                             We will write back within 12h
@@ -336,13 +338,12 @@
         data-js-darken-top data-transition-in></canvas>
     </div> --}}
 
-    <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('assets/js/gradientbgmv.js') }}"></script>
     <script src="{{ asset('assets/js/typed.min.js') }}"></script>
-    {{-- <script src="{{ asset('assets/js/gradientbgmvdiagonal.js') }}"></script>  --}}
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script> --}}
 
     @if ($errors->any())
     <script>
