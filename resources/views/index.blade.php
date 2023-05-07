@@ -92,7 +92,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/web-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/web-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Web Design </h2>
@@ -104,7 +104,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/graphic-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/graphic-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Graphic design </h2>
@@ -121,7 +121,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-src="{{asset('assets/images/marketing.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Marketing </h2>

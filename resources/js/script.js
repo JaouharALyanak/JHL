@@ -21,6 +21,7 @@ $(function () {
         autoplaySpeed: 2000,
         autoplay: true,
         slidesToShow: 1,
+        lazyLoad: 'ondemand',
     });
 
     $('.slides-carousel').on('afterChange', function(event, slick, currentSlide){
