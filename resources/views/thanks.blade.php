@@ -22,7 +22,7 @@
 
     @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
 </head>
-<body>
+<body class="d-flex flex-column" style="min-height: 100vh;">
     <div id="metodoviral-gradient">
         <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
     </div>
@@ -50,7 +50,7 @@
         </nav>
     </header>
 
-    <main style="background-image: none;" id="mainContent">
+    <main class="flex-fill" style="background-image: none;" id="mainContent">
 
         <section class="aboutus sp-1 bg-shadow-1">
             <div class="container">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="col-md-5 ms-auto order-md-2 order-1 mb-md-0 mb-4">
-                        <img class="img-fluid lazyload" loading="lazy" width="500" height="460" data-src="{{asset('assets/images/working.png') }}" alt="">
+                        <img class="img-fluid lazyload" loading="lazy" width="500" height="460" data-src="{{asset('assets/images/thanks.png') }}" alt="">
                     </div>
                 </div>
             </div>
