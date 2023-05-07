@@ -18,7 +18,7 @@ class ContactController extends Controller
             'email'=>'required|email',
             'subject'=>'required',
             'message'=>'required|string',
-            'recap2secure' => [ 'required', new Recaptcha ]
+            // 'recap2secure' => [ 'required', new Recaptcha ]
         ];
 
 	    $req->validate($rules);
