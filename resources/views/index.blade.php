@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="description" content="Agence création site web au Maroc , Création Site Web Maroc, Référencement et Conception Graphique au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
 	<link rel="canonical" href="https://www.jhl.ma/" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
-    <meta property="og:description" content="Agence création site web au Maroc , Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
+    <meta property="og:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
     <meta property="og:url" content="https://www.jhl.ma/" />
     <meta property="og:site_name" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
     <meta property="article:publisher" content="https://www.facebook.com/jhl.solution" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
-	<meta name="twitter:description" content="Agence création site web au Maroc , Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
+	<meta name="twitter:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHL</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
+    <title>Création site web au Maroc - Meilleur rapport qualité prix</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
