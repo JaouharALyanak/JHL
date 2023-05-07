@@ -305,7 +305,7 @@
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Subject</label>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control @error('subject') is-invalid @enderror" name="subject" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" id="inputName" placeholder="">
                                     @error('subject')
                                         <div class="invalid-feedback">
                                             {{$message}}
