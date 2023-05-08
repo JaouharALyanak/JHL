@@ -98,6 +98,12 @@ body {
     background-color: #09094f;
 }
 
+.btn-cta {
+    padding: 14px 90px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
 .sec-title {
     font-size: 2.8rem;
     font-weight: 600;
@@ -138,6 +144,11 @@ body {
 .form-control::placeholder {
     color: #6c757d;
     opacity: 1
+}
+
+/***** modal *****/
+.modal .modal-content {
+    border-radius: 0
 }
 
 /***** End Utility *****/
@@ -182,13 +193,17 @@ body {
         left: 0;
     }
 }
-
+@media (max-width:575.98px) {
+    .navbar-brand {
+        width: 90px;
+    }
+}
 /***** End Header *****/
 
 
 /***** Main Slider *****/
 .mainslider {
-    height: 400px;
+    height: 450px;
 }
 
 .mainslider .bnr-caption {
@@ -196,7 +211,8 @@ body {
     font-size: 3.7rem;
     color: #0f0c29;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
+    height: 300px;
 }
 
 .mainslider .bnr-caption h1 {
@@ -222,12 +238,16 @@ body {
 }
 @media (max-width: 758px) {
     .mainslider {
-        height: 350px;
+        height: 510px;
     }
     .mainslider .bnr-caption {
         padding-top: 40px;
         padding-bottom: 40px;
         font-size: 1.8rem;
+        height: 190px;
+    }
+    .mainslider .btn-cta {
+        padding: 14px 34px;
     }
 
     .mainslider .bnr-caption h1 {
@@ -462,6 +482,14 @@ body {
         height: auto;
     }
 
+    .services-block .services-slider .slides-wrapper .content {
+        font-size: 17px;
+    }
+
+    .services-block .services-slider .slides-carousel .content .service-title {
+        font-size: 26px;
+    }
+
     .services-block .services-slider .slides-carousel .cover {
         border-radius: 36px;
     }
@@ -537,7 +565,7 @@ body {
 /***** Cms *****/
 .cms-block .title {
     color: #101010;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 45px;
     margin-bottom: 20px;
 }
@@ -618,6 +646,11 @@ body {
     .titris-image {
         margin-top: 40px;
         margin-bottom: 40px;
+    }
+}
+@media (max-width:575.98px) {
+    .titris-image .level2 {
+        margin-left: 100px;
     }
 }
 /***** End titris-image *****/

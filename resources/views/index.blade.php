@@ -56,10 +56,37 @@
             <div class="container">
                 <div class="col-md-10 mx-auto px-0">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-8 mb-md-0 mb-5">
                             <div class="bnr-caption">
                                 <span id="typpedCaption"></span>
                             </div>
+                            <button type="button" class="btn btn-primary btn-cta" data-bs-toggle="modal" data-bs-target="#modalId">
+                                Let's talk business
+                            </button>
+
+                            <!-- Modal Body-->
+                            <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                Add rows here
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                         </div>
                         <div class="col-md-4">
                             <div class="promo-card col-md-10 ms-auto pt-md-4">
@@ -264,8 +291,11 @@
                         </h2>
                         <div class="cms-content">
                             <a class="text-reset me-3" href="tel:0652544556"> (+212) 652 54 45 56</a> .
-                            <a class="text-reset ms-3" href=""> Contact@jhl.com </a>
+                            <a class="text-reset ms-md-3 ms-sm-0" href="mailto:contact@jhl.com"> Contact@jhl.com </a>
                         </div>
+                        <nav class="nav mt-4">
+                            <a class="nav-link btn btn-icon bg-white rounded-circle py-1 px-2" href="#">Fb</a>
+                        </nav>
                     </div>
                     <div class="col-md-4 offset-md-1">
                         <form id="formContact" action="{{route('contact.send')}}" method="post"> @csrf
@@ -342,10 +372,6 @@
             <p class="py-3 m-0"> All Right reserved 2023</p>
         </div>
     </footer>
-
-    {{-- <div id='metodoviral-gradient-diagonal'><canvas id='gradient-canvas-diagonal'
-        data-js-darken-top data-transition-in></canvas>
-    </div> --}}
 
     {{-- <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

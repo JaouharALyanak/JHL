@@ -52,7 +52,7 @@ $(function () {
 
     if ($('#typpedCaption').length) {
         var typed = new Typed('#typpedCaption', {
-            strings: [ '<h1> <strong>GRATUIS ,</strong>Méthodes d&#39;attirer les Clients</h1>' ],
+            strings: [ '<h1> <strong>GRATUIS,</strong> Méthodes d&#39;attirer les Clients</h1>' ],
             typeSpeed: 40,
             onComplete: (self) => {
                 $(self.cursor).fadeOut(2000, function () {
