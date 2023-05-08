@@ -22,6 +22,17 @@
 
     @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ800BDB1W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YJ800BDB1W');
+</script>
+
 <body>
     <div id="metodoviral-gradient">
         <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
@@ -40,10 +51,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="pageMenu">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item"> <a class="nav-link" href="#"> About Us </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> JHL</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#"> Services </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#"> Projects </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Contact Us </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Contact </a> </li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +72,7 @@
                                 <span id="typpedCaption"></span>
                             </div>
                             <button type="button" class="btn btn-primary btn-cta" data-bs-toggle="modal" data-bs-target="#modalId">
-                                Let's talk business
+                                Meeting Gratuit
                             </button>
 
                             <!-- Modal Body-->
