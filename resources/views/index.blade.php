@@ -44,7 +44,7 @@
     <header class="mainheader">
         <nav class="navbar navbar-expand-md">
             <div class="container">
-                <a class="navbar-brand" href="www.jhl.ma">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#pageMenu" aria-controls="pageMenu"
@@ -205,7 +205,7 @@
                     <div class="col-md-3">
                         <div class="card-style-1">
                             <div class="content">
-                                <h2 class="counter"> 4 <strong>ANS</strong> </h2> <strong>D'EXPERIENCE</strong> 
+                                <h2 class="counter">+4 <strong>ANS</strong> </h2> <strong>D'EXPERIENCE</strong> 
                             </div>
                             <img class="img-br lazyload" loading="lazy" width="180" height="280" data-src="{{asset('assets/images/thumbs-up.png') }}" alt="">
                         </div>
@@ -218,12 +218,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Qui nous sommes ?</h2>
+                        <h2 class="title"> Qui sommes nous ?</h2>
                         <div class="cms-content">
                             <p> JHL Solutions a été créée avec la vision de proposer des solutions web personnalisées et innovantes pour nos clients. Nous avons été inspirés par les opportunités offertes par la technologie pour aider les entreprises à transformer leurs activités et à améliorer leur efficacité.</p>
-                            <p> Nous sommes passionnés par notre travail et nous sommes fiers de notre expertise en matière de conception de sites web, de développement de logiciels et de gestion de projets. Nous avons rassemblé une équipe de professionnels talentueux, chacun apportant une expertise unique dans son domaine.</p>
+                            {{-- <p> Nous sommes passionnés par notre travail et nous sommes fiers de notre expertise en matière de conception de sites web, de développement de logiciels et de gestion de projets. Nous avons rassemblé une équipe de professionnels talentueux, chacun apportant une expertise unique dans son domaine.</p> --}}
                             <p>Depuis notre création, nous avons travaillé avec de nombreuses entreprises pour les aider à créer des sites web professionnels et performants, à développer des logiciels sur mesure et à gérer des projets complexes.</p>
-                            <button class="btn btn-primary"> View more </button>
+                            {{-- <button class="btn btn-primary" >  </button> --}}
+                            <a class="btn btn-primary" href="#projects"> Projects </a>
                         </div>
                     </div>
                     <div class="col-md-5 ms-auto order-md-2 order-1 mb-md-0 mb-4">
@@ -242,7 +243,7 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Jibna, Plateforme de livraison</h2>
+                        <h2 class="title"><strong>Jibna</strong> , Plateforme de livraison</h2>
                         <div class="cms-content">
                             <p> Une Plateforme ser a gérer les commandes des restauts et les livreurs avec une application mobile des livreurs , </p>
                             <p> Une gestion complete des paiements avec un tracking des livreurs </p>
@@ -273,7 +274,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 cms-block">
-                        <h2 class="title"> Methc, Équipement médical et technologie des soins de santé</h2>
+                        <h2 class="title"> <strong>Methc</strong>, Équipement médical et technologie des soins de santé</h2>
                         <div class="cms-content">
                             <p> Une entreprise innovante spécialisée dans la vente, distribution, importation et exportation du matériel médico-technique. Elle compte parmi ses fournisseurs partenaires des leaders mondiaux du secteur, elle propose à ses clients une gamme très large, constituée de produits certifiés apportant toutes les garanties de qualité et de fiabilité, une notion de service (disponibilité, réactivité, rapidité), une grande connaissance des acteurs de fabrication et une forte compétence technique ainsi que le respect de la réglementation et des normes marocaines et internationales en vigueur.</p>
                             {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
@@ -285,7 +286,7 @@
 
                 <div class="row align-items-center mt-5">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Awman productions</h2>
+                        <h2 class="title"> <strong>Awman</strong> productions</h2>
                         <div class="cms-content">
                             <p> AWMAN PRODUCTIONS est une société marocaine dont l’activité principale est la production indépendante de courts et longs métrages, fiction et documentaire, pour le cinéma et la télévision. Située à Casablanca, la société accompagne les projets de leur initiation à la diffusion.</p>
                             {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
