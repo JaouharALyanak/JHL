@@ -9,17 +9,18 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
-    <meta property="og:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
+    <meta property="og:description" content="Jhl Solution Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
     <meta property="og:url" content="https://www.jhl.ma/" />
-    <meta property="og:site_name" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
+    <meta property="og:site_name" content="Jhl Solution Création Site Web Au Maroc" />
     <meta property="article:publisher" content="https://www.facebook.com/jhl.solution" />
+    <meta property="og:image" content="{{ asset('assets/images/favicon.png') }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/favicon.png') }}">
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
 	<meta name="twitter:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
     <title>Création site web au Maroc - Meilleur rapport qualité prix</title>
-
     @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh;">
@@ -31,7 +32,7 @@
     <header class="mainheader">
         <nav class="navbar navbar-expand-md">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#pageMenu" aria-controls="pageMenu"
@@ -40,10 +41,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="pageMenu">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item"> <a class="nav-link" href="#"> About Us </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Services </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Projects </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Contact Us </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#aboutus"> JHL</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#services"> Services </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#projects"> Projects </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#contact"> Contact </a> </li>
                     </ul>
                 </div>
             </div>

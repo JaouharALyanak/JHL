@@ -44,7 +44,7 @@
     <header class="mainheader">
         <nav class="navbar navbar-expand-md">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="www.jhl.ma">
                     <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#pageMenu" aria-controls="pageMenu"
@@ -103,7 +103,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="promo-card col-md-10 ms-auto pt-md-4">
-                                <span class="badge"> Our deals </span>
+                                <span class="badge"> Offres </span>
                                 <div id="typed-strings" class="d-none">
                                     <p>Entretien  <strong>GRATUIT</strong></p>
                                     <p>Première année d&#39;hébergement <strong>GRATUIT</strong></p>
