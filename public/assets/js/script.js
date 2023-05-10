@@ -4,7 +4,7 @@ $(function () {
     var serviceSlider = $(".slides-carousel").slick({
         infinite: false,
         arrows: false,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         autoplay: true,
         responsive: [
             {

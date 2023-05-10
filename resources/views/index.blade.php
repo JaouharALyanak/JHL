@@ -9,10 +9,12 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
-    <meta property="og:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
+    <meta property="og:description" content="Jhl Solution Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
     <meta property="og:url" content="https://www.jhl.ma/" />
-    <meta property="og:site_name" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
+    <meta property="og:site_name" content="Jhl Solution Création Site Web Au Maroc" />
     <meta property="article:publisher" content="https://www.facebook.com/jhl.solution" />
+    <meta property="og:image" content="{{ asset('assets/images/favicon.png') }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/favicon.png') }}">
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
 	<meta name="twitter:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
@@ -51,10 +53,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="pageMenu">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item"> <a class="nav-link" href="#"> JHL</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Services </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Projects </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Contact </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#aboutus"> JHL</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#services"> Services </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#projects"> Projects </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#contact"> Contact </a> </li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +74,7 @@
                                 <span id="typpedCaption"></span>
                             </div>
                             <button type="button" class="btn btn-primary btn-cta" data-bs-toggle="modal" data-bs-target="#modalId">
-                                Meeting Gratuit
+                                Meeting <strong>GRATUIT</strong>
                             </button>
 
                             <!-- Modal Body-->
@@ -117,7 +119,7 @@
             </div>
         </section>
 
-        <section class="services-block">
+        <section class="services-block" id="services">
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
@@ -133,8 +135,8 @@
                                                 <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/web-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
-                                                <h2 class="service-title"> Web Design </h2>
-                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                <h2 class="service-title"> Creation site web </h2>
+                                                <p>Creation de sites web professionnels et attrayants, avec des fonctionnalités telles que la compatibilité mobile, la sécurité, l'accessibilité, l'expérience utilisateur </p>
                                             </div>
                                         </div>
                                     </div>
@@ -145,13 +147,13 @@
                                                 <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/graphic-design.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
-                                                <h2 class="service-title"> Graphic design </h2>
-                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                                                <ul class="nav mt-5">
+                                                <h2 class="service-title"> Marketing </h2>
+                                                <p>Stratégies de marketing pour atteindre le public cible de l'entreprise, telles que la publicité en ligne, les médias sociaux, le marketing par e-mail . </p>
+                                                {{-- <ul class="nav mt-5">
                                                     <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/illustrator.png') }}" alt=""> </li>
                                                     <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/photoshop.png') }}" alt=""> </li>
                                                     <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/xd.png') }}" alt=""> </li>
-                                                </ul>
+                                                </ul> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -162,8 +164,20 @@
                                                 <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
-                                                <h2 class="service-title"> Marketing </h2>
-                                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                                <h2 class="service-title"> Référencement (SEO) </h2>
+                                                <p>Optimisation des sites web pour les moteurs de recherche afin d'améliorer leur visibilité et leur classement dans les résultats de recherche. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="row mx-auto">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.jpg') }}" alt="">
+                                            </div>
+                                            <div class="col-md-8 content py-4 ps-md-5">
+                                                <h2 class="service-title"> Maintenance </h2>
+                                                <p>Services de maintenance pour garantir que les sites web restent à jour et fonctionnent correctement, avec des mises à jour régulières des logiciels, des correctifs de sécurité </p>
                                             </div>
                                         </div>
                                     </div>
@@ -174,13 +188,16 @@
                         <div class="thumb-slider p-md-4 p-2">
                             <ul class="nav" id="thumbSlider">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-index="0" href="#"> Web design </a>
+                                    <a class="nav-link active" data-index="0" href="#">Creation site web</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-index="1" href="#"> Graphic design </a>
+                                    <a class="nav-link" data-index="1" href="#"> Marketing </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-index="2" href="#"> Marketing </a>
+                                    <a class="nav-link" data-index="2" href="#"> SEO </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-index="3" href="#"> Maintenance </a>
                                 </li>
                             </ul>
                         </div>
@@ -188,7 +205,7 @@
                     <div class="col-md-3">
                         <div class="card-style-1">
                             <div class="content">
-                                <h2 class="counter"> 4 years </h2> of magic
+                                <h2 class="counter"> 4 <strong>ANS</strong> </h2> <strong>D'EXPERIENCE</strong> 
                             </div>
                             <img class="img-br lazyload" loading="lazy" width="180" height="280" data-src="{{asset('assets/images/thumbs-up.png') }}" alt="">
                         </div>
@@ -197,14 +214,15 @@
             </div>
         </section>
 
-        <section class="aboutus sp-1 bg-shadow-1">
+        <section class="aboutus sp-1 bg-shadow-1" id="aboutus">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Who we are ?</h2>
+                        <h2 class="title"> Qui nous sommes ?</h2>
                         <div class="cms-content">
-                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
-                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
+                            <p> JHL Solutions a été créée avec la vision de proposer des solutions web personnalisées et innovantes pour nos clients. Nous avons été inspirés par les opportunités offertes par la technologie pour aider les entreprises à transformer leurs activités et à améliorer leur efficacité.</p>
+                            <p> Nous sommes passionnés par notre travail et nous sommes fiers de notre expertise en matière de conception de sites web, de développement de logiciels et de gestion de projets. Nous avons rassemblé une équipe de professionnels talentueux, chacun apportant une expertise unique dans son domaine.</p>
+                            <p>Depuis notre création, nous avons travaillé avec de nombreuses entreprises pour les aider à créer des sites web professionnels et performants, à développer des logiciels sur mesure et à gérer des projets complexes.</p>
                             <button class="btn btn-primary"> View more </button>
                         </div>
                     </div>
@@ -215,20 +233,20 @@
             </div>
         </section>
 
-        <section class="projects sp-1 bg-shadow-1">
+        <section class="projects sp-1 bg-shadow-1" id="projects">
             <div class="container">
                 <div class="row">
                     <div class="col-auto mx-auto mb-5">
-                        <h2 class="sec-title text-center"> Our Last Projects </h2>
+                        <h2 class="sec-title text-center"> Nos derniers projets</h2>
                     </div>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Jibna, delivery platform</h2>
+                        <h2 class="title"> Jibna, Plateforme de livraison</h2>
                         <div class="cms-content">
-                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
-                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
-                            <button class="btn btn-primary"> View more </button>
+                            <p> Une Plateforme ser a gérer les commandes des restauts et les livreurs avec une application mobile des livreurs , </p>
+                            <p> Une gestion complete des paiements avec un tracking des livreurs </p>
+                            {{-- <button class="btn btn-primary"> View more </button> --}}
                         </div>
                     </div>
                     <div class="col-md-5 ms-auto order-md-2 order-1">
@@ -255,11 +273,11 @@
                         </div>
                     </div>
                     <div class="col-md-6 cms-block">
-                        <h2 class="title"> Methc, Medical Equipment & Technology of HealthCare</h2>
+                        <h2 class="title"> Methc, Équipement médical et technologie des soins de santé</h2>
                         <div class="cms-content">
-                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
-                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
-                            <button class="btn btn-primary"> View more </button>
+                            <p> Une entreprise innovante spécialisée dans la vente, distribution, importation et exportation du matériel médico-technique. Elle compte parmi ses fournisseurs partenaires des leaders mondiaux du secteur, elle propose à ses clients une gamme très large, constituée de produits certifiés apportant toutes les garanties de qualité et de fiabilité, une notion de service (disponibilité, réactivité, rapidité), une grande connaissance des acteurs de fabrication et une forte compétence technique ainsi que le respect de la réglementation et des normes marocaines et internationales en vigueur.</p>
+                            {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
+                            <a class="btn btn-primary" href="https://www.methc.ma/" target="_blank">Visit Methc</a>
                         </div>
                     </div>
                 </div>
@@ -269,9 +287,10 @@
                     <div class="col-md-6 cms-block order-md-1 order-2">
                         <h2 class="title"> Awman productions</h2>
                         <div class="cms-content">
-                            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic alias nihil sint impedit molestias rerum perferendis sit facere,</p>
-                            <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p>
-                            <button class="btn btn-primary"> View more </button>
+                            <p> AWMAN PRODUCTIONS est une société marocaine dont l’activité principale est la production indépendante de courts et longs métrages, fiction et documentaire, pour le cinéma et la télévision. Située à Casablanca, la société accompagne les projets de leur initiation à la diffusion.</p>
+                            {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
+                            <a class="btn btn-primary" href="https://awman-productions.com/fr" target="_blank">Visit AWMAN</a>
+
                         </div>
                     </div>
                     <div class="col-md-5 ms-auto order-md-2 order-1">
@@ -290,19 +309,19 @@
         </section>
 
 
-        <section class="contactus sp-1">
+        <section class="contactus sp-1" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 cms-block offset-md-1 mb-md-0 mb-5">
                         <span class="badge">Contact</span>
                         <h2 class="title mt-4 mb-md-5 mb-4">
-                            Any quastions ? <br>
-                            Write or call us. <br>
-                            We will write back within 12h
+                            OBTENIR  <br>
+                            UNE CONSULTATION <br>
+                            GRATUITE
                         </h2>
                         <div class="cms-content">
-                            <a class="text-reset me-3" href="tel:0652544556"> (+212) 652 54 45 56</a> .
-                            <a class="text-reset ms-md-3 ms-sm-0" href="mailto:contact@jhl.com"> Contact@jhl.com </a>
+                            <a class="text-reset me-3" href="tel:+212 667-246440"> (+212) 667-246440</a> .
+                            <a class="text-reset ms-md-3 ms-sm-0" href="mailto:contact@jhl.com"> Contact@jhl.ma </a>
                         </div>
                         <nav class="nav mt-4">
                             <a class="nav-link btn btn-icon bg-white rounded-circle py-1 px-2" href="#">Fb</a>
@@ -368,7 +387,7 @@
                             </div>
 
                             <div class="form-group text-end">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Envoyez</button>
                             </div>
                         </form>
                     </div>
