@@ -162,7 +162,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/web-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/web-design.webp') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Creation site web </h2>
@@ -174,7 +174,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/graphic-design.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/graphic-design.webp') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Marketing </h2>
@@ -186,7 +186,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.webp') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Référencement (SEO) </h2>
@@ -198,7 +198,7 @@
                                     <div>
                                         <div class="row mx-auto">
                                             <div class="col-md-4">
-                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.jpg') }}" alt="">
+                                                <img class="img-fluid cover lazyload" loading="lazy" width="223" height="272" data-lazy="{{asset('assets/images/marketing.webp') }}" alt="">
                                             </div>
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Maintenance </h2>
