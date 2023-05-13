@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 cms-block order-md-1 order-2">
-                        <h2 class="title"> Nous vous remercions d'avoir pris contact avec</h2>
+                        <h2 class="title"> Nous vous remercions d'avoir pris contact avec JHL Solution</h2>
                         <div class="cms-content">
                             <p>
                                 Notre équipe a bien reçu votre message et nous sommes en train d'examiner les détails que vous avez fournis. Nous comprenons l'importance de votre demande et nous nous engageons à vous répondre dans les plus brefs délais.
@@ -75,28 +75,9 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <p class="py-3 m-0"> All Right reserved 2023</p>
+            <p class="py-3 m-0"> All Right reserved {{date('Y')}}</p>
         </div>
     </footer>
-
-    {{-- <div id='metodoviral-gradient-diagonal'><canvas id='gradient-canvas-diagonal'
-        data-js-darken-top data-transition-in></canvas>
-    </div> --}}
-
-    {{-- <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <script src="{{ asset('assets/js/gradientbgmv.js') }}"></script>
-    <script src="{{ asset('assets/js/typed.min.js') }}"></script>
-    <script src="{{ asset('assets/js/script.js') }}"></script> --}}
-
-    @if ($errors->any())
-    <script>
-        $(document).ready(function () {
-            $(window).scrollTop( $('#formContact').offset().top - 40);
-        })
-    </script>
-    @endif
 
 </body>
 </html>

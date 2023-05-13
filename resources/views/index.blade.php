@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://www.jhl.ma/" />
     <meta property="og:site_name" content="Jhl Solution Création Site Web Au Maroc" />
     <meta property="article:publisher" content="https://www.facebook.com/jhl.solution" />
-    <meta property="og:image" content="{{ asset('assets/images/favicon.png') }}">
-    <meta property="og:image:secure_url" content="{{ asset('assets/images/favicon.png') }}">
+    <meta property="og:image" content="{{ asset('assets/images/cover-jhl.jpg') }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/cover-jhl.jpg') }}">
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Création Site Web Maroc, Création Site eCommerce et Marketing" />
 	<meta name="twitter:description" content="Agence création site web au Maroc meilleur rapport qualité prix, Création Site Web Maroc, Référencement et Conception Graphique  au Maroc, Création de site Web Design Unique , Entretient Gratuit ,  Création Site eCommerce, Création de Site Web eCommerce au Maroc Meilleur Qualité et Prix " />
@@ -67,42 +67,72 @@
 
         <section class="mainslider">
             <div class="container">
-                <div class="col-md-10 mx-auto px-0">
+                <div class="col-lg-10 mx-auto px-0">
                     <div class="row">
-                        <div class="col-md-8 mb-md-0 mb-5">
+                        <div class="col-lg-8 mb-md-0 mb-5">
                             <div class="bnr-caption">
                                 <span id="typpedCaption"></span>
                             </div>
                             <button type="button" class="btn btn-primary btn-cta" data-bs-toggle="modal" data-bs-target="#modalId">
                                 Meeting <strong>GRATUIT</strong>
                             </button>
+                            @if ($errors->any() && ($errors->has('name1') || $errors->has('email1') || $errors->has('tel1') ) )
+                                <div class="alert alert-danger alert-dismissible fade show col-lg-6 mt-2" role="alert">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    @foreach ($errors->all() as $message)
+                                    <li>{{$message}}</li>
+                                    @endforeach
+                                </div>
+                            @endif
 
                             <!-- Modal Body-->
                             <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalTitleId">Modal title</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
                                         <div class="modal-body">
-                                            <div class="container-fluid">
-                                                Add rows here
+                                            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <div class="w-100 text-center my-4 px-md-4">
+                                                <h2 class="h5"> Remplissez le formulaire pour organiser une rencontre </h2>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save</button>
+                                            <div class="container-fluid">
+                                                <div class="container">
+                                                    <form action="{{route('contact.sendmeet')}}" method="post" > @csrf
+                                                        <div class="form-group row mb-3">
+                                                            <label for="fullname" class="col-sm-1-12 col-form-label">Nom Prenom</label>
+                                                            <div class="col-sm-1-12">
+                                                                <input type="text" class="form-control" name="name1" id="fullname" placeholder="" required="required">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row mb-3">
+                                                            <label for="email1" class="col-sm-1-12 col-form-label">Email</label>
+                                                            <div class="col-sm-1-12">
+                                                                <input type="text" class="form-control" name="email1" id="email1" placeholder="" required="required" >
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row mb-3">
+                                                            <label for="phone1" class="col-sm-1-12 col-form-label">Telephone</label>
+                                                            <div class="col-sm-1-12">
+                                                                <input type="text" class="form-control" name="tel1" id="phone1" placeholder=""
+                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')"
+                                                                    onkeypress='if( event.keyCode == 46 || event.keyCode == 8 || this.value.length < 20 ) return true; else return false;' >
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group my-4 pt-3 text-end">
+                                                            <button type="submit" class="btn btn-primary px-md-5 px-3">Envoyez</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-                        <div class="col-md-4">
-                            <div class="promo-card col-md-10 ms-auto pt-md-4">
+                        <div class="col-lg-4">
+                            <div class="promo-card col-lg-11 ms-auto pt-md-4">
                                 <span class="badge"> Offres </span>
                                 <div id="typed-strings" class="d-none">
                                     <p>Entretien  <strong>GRATUIT</strong></p>
@@ -122,7 +152,7 @@
         <section class="services-block" id="services">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-lg-9">
                         <div class="services-slider">
                             <div class="slides-wrapper ps-md-4 py-4">
                                 <span class="pseudo-start">
@@ -149,11 +179,6 @@
                                             <div class="col-md-8 content py-4 ps-md-5">
                                                 <h2 class="service-title"> Marketing </h2>
                                                 <p>Stratégies de marketing pour atteindre le public cible de l'entreprise, telles que la publicité en ligne, les médias sociaux, le marketing par e-mail . </p>
-                                                {{-- <ul class="nav mt-5">
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/illustrator.png') }}" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/photoshop.png') }}" alt=""> </li>
-                                                    <li class="nav-item pe-4"> <img class="w-60 img-fluid" src="{{asset('assets/images/xd.png') }}" alt=""> </li>
-                                                </ul> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -202,10 +227,10 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 mt-ld-0 mt-md-4">
                         <div class="card-style-1">
                             <div class="content">
-                                <h2 class="counter">+4 <strong>ANS</strong> </h2> <strong>D'EXPERIENCE</strong> 
+                                <h2 class="counter">+4 <strong>ANS</strong> </h2> <strong>D'EXPERIENCE</strong>
                             </div>
                             <img class="img-br lazyload" loading="lazy" width="180" height="280" data-src="{{asset('assets/images/thumbs-up.png') }}" alt="">
                         </div>
@@ -221,9 +246,7 @@
                         <h2 class="title"> Qui sommes nous ?</h2>
                         <div class="cms-content">
                             <p> JHL Solutions a été créée avec la vision de proposer des solutions web personnalisées et innovantes pour nos clients. Nous avons été inspirés par les opportunités offertes par la technologie pour aider les entreprises à transformer leurs activités et à améliorer leur efficacité.</p>
-                            {{-- <p> Nous sommes passionnés par notre travail et nous sommes fiers de notre expertise en matière de conception de sites web, de développement de logiciels et de gestion de projets. Nous avons rassemblé une équipe de professionnels talentueux, chacun apportant une expertise unique dans son domaine.</p> --}}
                             <p>Depuis notre création, nous avons travaillé avec de nombreuses entreprises pour les aider à créer des sites web professionnels et performants, à développer des logiciels sur mesure et à gérer des projets complexes.</p>
-                            {{-- <button class="btn btn-primary" >  </button> --}}
                             <a class="btn btn-primary" href="#projects"> Projects </a>
                         </div>
                     </div>
@@ -250,13 +273,15 @@
                             {{-- <button class="btn btn-primary"> View more </button> --}}
                         </div>
                     </div>
-                    <div class="col-md-5 ms-auto order-md-2 order-1">
+                    <div class="col-md-5 ms-auto order-md-2 order-1 text-center">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/jibna.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290"
+                                data-src="{{asset('assets/images/jibna.webp') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/jibna_mobile.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270"
+                                data-src="{{asset('assets/images/jibna_mobile.webp') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -264,12 +289,14 @@
 
                 <div class="row align-items-center mt-5">
                     <div class="col-md-5 me-auto">
-                        <div class="titris-image">
+                        <div class="titris-image text-center">
                             <div class="level1 a-scroll">
-                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/methc.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290"
+                                data-src="{{asset('assets/images/methc.webp') }}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/methc_mobile.jpg') }}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270"
+                                 data-src="{{asset('assets/images/methc_mobile.webp') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -277,7 +304,6 @@
                         <h2 class="title"> <strong>Methc</strong>, Équipement médical et technologie des soins de santé</h2>
                         <div class="cms-content">
                             <p> Une entreprise innovante spécialisée dans la vente, distribution, importation et exportation du matériel médico-technique. Elle compte parmi ses fournisseurs partenaires des leaders mondiaux du secteur, elle propose à ses clients une gamme très large, constituée de produits certifiés apportant toutes les garanties de qualité et de fiabilité, une notion de service (disponibilité, réactivité, rapidité), une grande connaissance des acteurs de fabrication et une forte compétence technique ainsi que le respect de la réglementation et des normes marocaines et internationales en vigueur.</p>
-                            {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
                             <a class="btn btn-primary" href="https://www.methc.ma/" target="_blank">Visit Methc</a>
                         </div>
                     </div>
@@ -289,18 +315,18 @@
                         <h2 class="title"> <strong>Awman</strong> productions</h2>
                         <div class="cms-content">
                             <p> AWMAN PRODUCTIONS est une société marocaine dont l’activité principale est la production indépendante de courts et longs métrages, fiction et documentaire, pour le cinéma et la télévision. Située à Casablanca, la société accompagne les projets de leur initiation à la diffusion.</p>
-                            {{-- <p> autem beatae delectus quis illo voluptatum sed in porro accusantium unde? </p> --}}
                             <a class="btn btn-primary" href="https://awman-productions.com/fr" target="_blank">Visit AWMAN</a>
-
                         </div>
                     </div>
-                    <div class="col-md-5 ms-auto order-md-2 order-1">
+                    <div class="col-md-5 ms-auto order-md-2 order-1 text-center">
                         <div class="titris-image">
                             <div class="level1 a-scroll">
-                                <img class="lazyload" loading="lazy" width="270" height="290" data-src="{{asset('assets/images/awmanpro.jpg')}}" alt="">
+                                <img class="lazyload" loading="lazy" width="270" height="290"
+                                data-src="{{asset('assets/images/awmanpro.webp')}}" alt="">
                             </div>
                             <div class="level2 a-scroll speed-100">
-                                <img class="lazyload" loading="lazy" width="170" height="270" data-src="{{asset('assets/images/awmanpro_mobile.jpg')}}" alt="">
+                                <img class="lazyload" loading="lazy" width="170" height="270"
+                                data-src="{{asset('assets/images/awmanpro_mobile.webp')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -313,7 +339,7 @@
         <section class="contactus sp-1" id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 cms-block offset-md-1 mb-md-0 mb-5">
+                    <div class="col-xl-4 col-md-6 cms-block offset-xl-1 mb-md-0 mb-5">
                         <span class="badge">Contact</span>
                         <h2 class="title mt-4 mb-md-5 mb-4">
                             OBTENIR  <br>
@@ -328,7 +354,7 @@
                             <a class="nav-link btn btn-icon bg-white rounded-circle py-1 px-2" href="#">Fb</a>
                         </nav>
                     </div>
-                    <div class="col-md-4 offset-md-1">
+                    <div class="col-xl-4 col-md-6 offset-xl-1">
                         <form id="formContact" action="{{route('contact.send')}}" method="post"> @csrf
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Name</label>
@@ -344,7 +370,9 @@
                             <div class="form-group">
                                 <label for="inputName" class="form-label"> Phone</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="inputName" placeholder=""
+                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')"
+                                        onkeypress='if( event.keyCode == 46 || event.keyCode == 8 || this.value.length < 20 ) return true; else return false;' >
                                     @error('tel')
                                         <div class="invalid-feedback">
                                             {{$message}}
@@ -400,22 +428,15 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <p class="py-3 m-0"> All Right reserved 2023</p>
+            <p class="py-3 m-0"> All Right reserved {{date('Y')}}</p>
         </div>
     </footer>
 
-    {{-- <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <script src="{{ asset('assets/js/gradientbgmv.js') }}"></script>
-    <script src="{{ asset('assets/js/typed.min.js') }}"></script>
-    <script src="{{ asset('assets/js/script.js') }}"></script> --}}
-
-    @if ($errors->any())
+    @if ($errors->any() && !($errors->has('name1') || $errors->has('email1') || $errors->has('tel1') ) )
     <script>
-        $(document).ready(function () {
-            $(window).scrollTop( $('#formContact').offset().top - 40);
-        })
+        document.getElementById('formContact').scrollIntoView({
+            behavior: "smooth"
+        });
     </script>
     @endif
 
