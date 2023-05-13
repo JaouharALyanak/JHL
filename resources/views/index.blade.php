@@ -44,8 +44,8 @@
     <header class="mainheader">
         <nav class="navbar navbar-expand-md">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="">
+                <a class="navbar-brand" href="{{ route('home') }}" title="{{config('app.name')}}">
+                    <img class="img-fluid" src="{{asset('assets/images/logo.svg') }}" alt="{{config('app.name')}}">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#pageMenu" aria-controls="pageMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -357,9 +357,9 @@
                     <div class="col-xl-4 col-md-6 offset-xl-1">
                         <form id="formContact" action="{{route('contact.send')}}" method="post"> @csrf
                             <div class="form-group">
-                                <label for="inputName" class="form-label"> Name</label>
+                                <label for="name" class="form-label"> Name</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="">
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{$message}}
@@ -368,9 +368,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputName" class="form-label"> Phone</label>
+                                <label for="tel" class="form-label"> Phone</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="inputName" placeholder=""
+                                    <input type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" id="tel" placeholder=""
                                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')"
                                         onkeypress='if( event.keyCode == 46 || event.keyCode == 8 || this.value.length < 20 ) return true; else return false;' >
                                     @error('tel')
@@ -381,9 +381,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputName" class="form-label"> Email</label>
+                                <label for="email" class="form-label"> Email</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="">
                                     @error('email')
                                         <div class="invalid-feedback">
                                             {{$message}}
@@ -392,9 +392,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputName" class="form-label"> Subject</label>
+                                <label for="message" class="form-label"> Subject</label>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" id="inputName" placeholder="">
+                                    <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" id="message" placeholder="">
                                     @error('subject')
                                         <div class="invalid-feedback">
                                             {{$message}}
