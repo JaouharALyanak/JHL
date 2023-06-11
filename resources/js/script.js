@@ -1,4 +1,4 @@
-import { Collapse } from 'bootstrap';
+import { Collapse, Modal } from 'bootstrap';
 import Typed from 'typed.js';
 import $ from 'jquery';
 window.$ = $;
@@ -60,5 +60,13 @@ $(function () {
                 });
             },
         });
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm_source = urlParams.get('utm_source');
+
+    if ($('#modalId').length && utm_source != null ) {
+        const modalForm = new Modal('#modalId');
+        modalForm.show();
     }
 });
