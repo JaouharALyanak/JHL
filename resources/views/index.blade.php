@@ -23,18 +23,17 @@
     <title>Création site web au Maroc - Meilleur rapport qualité prix</title>
 
     @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ800BDB1W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YJ800BDB1W');
+    </script>
+
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ800BDB1W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YJ800BDB1W');
-</script>
-
 <body>
     <div id="metodoviral-gradient">
         <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
