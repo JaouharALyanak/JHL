@@ -102,6 +102,7 @@
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                         <li class="nav-item"> <a class="nav-link" href="#aboutus"> JHL</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#services"> Services </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#solutions"> Solutions </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#projects"> Projects </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#contact"> Contact </a> </li>
                     </ul>
