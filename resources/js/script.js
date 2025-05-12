@@ -69,4 +69,38 @@ $(function () {
         const modalForm = new Modal('#modalId');
         modalForm.show();
     }
+
+
+
+
+    console.log('efef');
+    //Fade in delay for the background overlay (control timing here)
+	$("#bkgOverlay").delay(4000).fadeIn(400);
+    //Fade in delay for the popup (control timing here)
+    //   $("#modalId").delay(5000).fadeIn(400);
+    //   const modalForm = new Modal('#modalId');
+    //   modalForm.delay(5000).show();
+    setTimeout(function() {
+        const modalForm = new Modal('#modalId');
+        modalForm.show();
+    }, 4000);
+      //Hide dialouge and background when the user clicks the close button
+      $("#btnClose").click(function (e)
+      {
+          HideDialog();
+          e.preventDefault();
+      });
+  
+  
+
+
+
 });
+
+
+//Controls how the modal popup is closed with the close button
+function HideDialog()
+{
+    $("#bkgOverlay").fadeOut(400);
+    $("#delayedPopup").fadeOut(300);
+}

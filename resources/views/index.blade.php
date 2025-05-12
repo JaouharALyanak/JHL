@@ -22,6 +22,54 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
     <title>Création site web au Maroc - Meilleur rapport qualité prix</title>
 
+    <style>
+        .solutions-block {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+        }
+        .solution-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .solution-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+        .card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: 50%;
+        }
+        .card-icon img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        .solution-card:hover .card-icon img {
+            transform: scale(1.1);
+        }
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .contact-links a:hover {
+            opacity: 0.8;
+        }
+        .contact-links img {
+            filter: brightness(0) invert(1);
+        }
+    </style>
     @vite([ 'resources/css/app.css', 'resources/js/app.js' ])
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ800BDB1W"></script>
@@ -89,7 +137,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-body">
-                                            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close" id="btnClose"></button>
                                             <div class="w-100 text-center my-4 px-md-4">
                                                 <h2 class="h5"> Remplissez le formulaire pour organiser une rencontre </h2>
                                             </div>
@@ -238,6 +286,72 @@
             </div>
         </section>
 
+        <section class="solutions-block sp-1" id="solutions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto mx-auto mb-5">
+                        <h2 class="sec-title text-center">Nos Solutions d'Entreprise</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/erp-solution.svg')}}" alt="Solution ERP" width="60" height="60">
+                            </div>
+                            <h3 class="h4 mb-3">Solution ERP</h3>
+                            <p>Un système de gestion d'entreprise intégré qui optimise vos processus métier, de la comptabilité aux ventes en passant par les achats et la production.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/hr-solution.svg')}}" alt="Système RH & Paie" width="60" height="60">
+                            </div>
+                            <h3 class="h4 mb-3">Système RH & Paie</h3>
+                            <p>Gérez efficacement vos ressources humaines avec notre solution complète incluant la gestion des employés, la paie, les congés et les performances.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/inventory-solution.svg')}}" alt="Gestion de Stock" width="60" height="60">
+                            </div>
+                            <h3 class="h4 mb-3">Gestion de Stock</h3>
+                            <p>Optimisez votre inventaire avec notre solution de gestion de stock qui permet un suivi en temps réel, des alertes de réapprovisionnement et des rapports détaillés.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/crm-solution.svg')}}" alt="Solution CRM" width="80" height="80">
+                            </div>
+                            <h3 class="h4 mb-3">Solution CRM</h3>
+                            <p>Gérez efficacement vos relations clients avec notre solution CRM complète incluant le suivi des contacts, la gestion des opportunités, et l'analyse des données clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/pos-solution.svg')}}" alt="Solution Point de Vente" width="80" height="80">
+                            </div>
+                            <h3 class="h4 mb-3">Solution Point de Vente</h3>
+                            <p>Optimisez vos opérations de vente avec notre système de point de vente intégré, incluant la gestion des transactions, le suivi des stocks en temps réel et les rapports détaillés.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="solution-card h-100">
+                            <div class="card-icon mb-4">
+                                <img src="{{asset('assets/images/ecommerce-solution.svg')}}" alt="Solution E-commerce" width="80" height="80">
+                            </div>
+                            <h3 class="h4 mb-3">Solution E-commerce</h3>
+                            <p>Lancez votre boutique en ligne avec notre solution e-commerce complète, incluant la gestion des produits, le panier d'achat, et les paiements sécurisés.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="aboutus sp-1 bg-shadow-1" id="aboutus">
             <div class="container">
                 <div class="row align-items-center">
@@ -346,8 +460,23 @@
                             GRATUITE
                         </h2>
                         <div class="cms-content">
-                            <a class="text-reset me-3" href="tel:+212 667-246440"> (+212) 667-246440</a> .
-                            <a class="text-reset ms-md-3 ms-sm-0" href="mailto:contact@jhl.com"> Contact@jhl.ma </a>
+                            <div class="contact-links mb-3">
+                                <a class="d-flex align-items-center mb-2" href="https://wa.me/212667246440">
+                                    <img src="{{asset('assets/images/whatsapp-icon.svg')}}" alt="WhatsApp" width="24" height="24" class="me-2">
+                                    <span>(+212) 667-246440</span>
+                                </a>
+                                <a class="d-flex align-items-center mb-2" href="tel:+212613602276">
+                                    <img src="{{asset('assets/images/phone-icon.svg')}}" alt="Téléphone" width="24" height="24" class="me-2">
+                                    <span>(+212) 613-602276</span>
+                                </a>
+                                <a class="d-flex align-items-center mb-2" href="tel:+212677074093" onclick="window.location.href='tel:+2120677074093';window.open('https://wa.me/2120677074093', '_blank');">
+                                    <img src="{{asset('assets/images/contact-combined-icon.svg')}}" alt="Contact" width="48" height="24" class="me-2">
+                                    <span>(+212) 677-074093</span>
+                                </a>
+                                <a class="d-flex align-items-center" href="mailto:contact@jhl.ma">
+                                    <span>Contact@jhl.ma</span>
+                                </a>
+                            </div>
                         </div>
                         <ul class="nav mt-4 social-media">
                             <li class="nav-item"> <a rel="nofollow" class="nav-link" target='_blank' href="https://www.facebook.com/jhl.solution/">
@@ -432,6 +561,59 @@
                 </div>
             </div>
         </section>
+
+
+                <div id="bkgOverlay" class="backgroundOverlay"></div>
+        
+        <div id="delayedPopup" class="delayedPopupWindow">
+        <!-- This is the close button -->
+        <a href="#" id="btnClose" title="Click here to close this deal box.">[ X ]</a>
+        <!-- This is the left side of the popup for the description -->
+        <div class="formDescription">
+            <h2>Sign Up and <span style="color: #40c348; font-weight: bold;">Save $25!</span></h2>
+            <p>Sign up for our Deal Alerts and save
+            $25 Off of your first order of $50 or more!</p>
+        </div>
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <div class="mc-field-group">
+                <label for="mce-FNAME">First Name
+                <span class="asterisk">*</span>
+                </label>
+                <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+            </div>
+            <div class="mc-field-group">
+                <label for="mce-LNAME">Last Name
+                <span class="asterisk">*</span>
+                </label>
+                <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+            </div>
+            <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address
+                <span class="asterisk">*</span>
+                </label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;">
+                <input type="text" name="b_2aabb98e55b83ba9d3bd551f5_e6c08b53b4" value="">
+            </div>
+            <div class="clear">
+                <input type="submit" value="Save Money!" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+            </form>
+        </div>
+        <!-- End MailChimp Signup Form -->
+        </div>
+
+
+
 
     </main>
 
