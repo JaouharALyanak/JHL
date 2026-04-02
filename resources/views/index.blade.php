@@ -470,10 +470,7 @@
                                     <img src="{{asset('assets/images/phone-icon.svg')}}" alt="Téléphone" width="24" height="24" class="me-2">
                                     <span>(+212) 613-602276</span>
                                 </a>
-                                <a class="d-flex align-items-center mb-2" href="tel:+212677074093" onclick="window.location.href='tel:+2120677074093';window.open('https://wa.me/2120677074093', '_blank');">
-                                    <img src="{{asset('assets/images/contact-combined-icon.svg')}}" alt="Contact" width="48" height="24" class="me-2">
-                                    <span>(+212) 677-074093</span>
-                                </a>
+                               
                                 <a class="d-flex align-items-center" href="mailto:contact@jhl.ma">
                                     <span>Contact@jhl.ma</span>
                                 </a>
