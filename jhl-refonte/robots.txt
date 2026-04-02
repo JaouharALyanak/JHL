@@ -1,0 +1,15 @@
+# Robots.txt pour JHL.ma
+
+User-agent: *
+Allow: /
+
+# Disallow admin et fichiers temporaires
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://jhl.ma/sitemap.xml
+
+# Crawl-delay (optionnel)
+Crawl-delay: 1
