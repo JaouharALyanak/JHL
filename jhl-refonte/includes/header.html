@@ -1,0 +1,62 @@
+<!-- ============================================
+     HEADER NAVIGATION
+     Usage: Copier ce code dans chaque page HTML
+     Variables à définir avant inclusion:
+     - var relativePath = '../' (pour pages dans sous-dossiers)
+     - var currentPage = 'accueil' | 'services' | 'solutions' | 'realisations' | 'contact' | 'blog'
+     ============================================ -->
+<header class="header">
+  <div class="container">
+    <nav class="header__nav">
+      <!-- Logo -->
+      <a href="__ROOTPATH__index.html" class="header__logo" aria-label="JHL Solutions - Retour à l'accueil">
+        <img src="__ROOTPATH__assets/images/logo.svg" alt="JHL Solutions Logo" width="120" height="40">
+      </a>
+
+      <!-- Menu Desktop -->
+      <ul class="header__menu">
+        <li><a href="__ROOTPATH__index.html" class="header__link __ACTIVE_ACCUEIL__">Accueil</a></li>
+        <li class="header__dropdown">
+          <a href="__ROOTPATH__services/creation-site-web.html" class="header__link __ACTIVE_SERVICES__">
+            Services <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L2 4h8L6 8z"/></svg>
+          </a>
+          <ul class="header__submenu">
+            <li><a href="__ROOTPATH__services/creation-site-web.html">Création Site Web</a></li>
+            <li><a href="__ROOTPATH__services/referencement-seo.html">Référencement SEO</a></li>
+            <li><a href="__ROOTPATH__services/marketing-digital.html">Marketing Digital</a></li>
+            <li><a href="__ROOTPATH__services/maintenance-web.html">Maintenance Web</a></li>
+          </ul>
+        </li>
+        <li><a href="__ROOTPATH__solutions/erp.html" class="header__link __ACTIVE_SOLUTIONS__">Solutions ERP</a></li>
+        <li><a href="__ROOTPATH__realisations/index.html" class="header__link __ACTIVE_REALISATIONS__">Réalisations</a></li>
+        <li><a href="__ROOTPATH__contact/index.html" class="header__link __ACTIVE_CONTACT__">Contact</a></li>
+        <li><a href="__ROOTPATH__blog/index.html" class="header__link __ACTIVE_BLOG__">Blog</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <a href="__ROOTPATH__contact/index.html" class="btn btn--primary header__cta">Devis gratuit</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="header__toggle" aria-label="Menu mobile" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="header__mobile-menu">
+      <ul>
+        <li><a href="__ROOTPATH__index.html">Accueil</a></li>
+        <li><a href="__ROOTPATH__services/creation-site-web.html">Création Site Web</a></li>
+        <li><a href="__ROOTPATH__services/referencement-seo.html">Référencement SEO</a></li>
+        <li><a href="__ROOTPATH__services/marketing-digital.html">Marketing Digital</a></li>
+        <li><a href="__ROOTPATH__services/maintenance-web.html">Maintenance Web</a></li>
+        <li><a href="__ROOTPATH__solutions/erp.html">Solutions ERP</a></li>
+        <li><a href="__ROOTPATH__realisations/index.html">Réalisations</a></li>
+        <li><a href="__ROOTPATH__contact/index.html">Contact</a></li>
+        <li><a href="__ROOTPATH__blog/index.html">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

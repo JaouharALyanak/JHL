@@ -1,0 +1,53 @@
+# JHL Refonte - Git Ignore
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (si vous ajoutez Node.js)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.min.css
+*.min.js
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Cache
+.cache/
+
+# Laravel specific (si intégration)
+/vendor/
+/storage/*.key
+/public/hot
+/public/storage
+
+# Images temporaires ou de test
+assets/images/test/
+assets/images/*.backup.*
