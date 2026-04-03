@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+  <!-- Meta Tags de base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Réalisations & Portfolio | Projets Web Réussis au Maroc - JHL</title>
+  <meta name="description" content="Découvrez nos réalisations : sites web, e-commerce, applications sur mesure pour entreprises marocaines. +50 projets réussis à Casablanca et au Maroc.">
+  <meta name="keywords" content="portfolio agence web Maroc, réalisations JHL, projets web Maroc, références clients Casablanca, sites web réalisés">
+  <link rel="canonical" href="https://jhl.ma/realisations/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio JHL | Réalisations Web Maroc">
+  <meta property="og:description" content="Découvrez nos projets web réalisés pour des entreprises marocaines.">
+  <meta property="og:url" content="https://jhl.ma/realisations/">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/sections.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <a href="../index.html" class="header__logo">
+          <img src="../assets/images/logo.svg" alt="JHL Solutions" width="120" height="40">
+        </a>
+        <ul class="header__menu">
+          <li><a href="../index.html" class="header__link">Accueil</a></li>
+          <li class="header__dropdown">
+            <a href="../services/creation-site-web.html" class="header__link">
+              Services <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L2 4h8L6 8z"/></svg>
+            </a>
+            <ul class="header__submenu">
+              <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
+              <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
+              <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
+              <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
+            </ul>
+          </li>
+          <li class="header__dropdown">
+            <a href="../solutions/erp.html" class="header__link">
+              Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L2 4h8L6 8z"/></svg>
+            </a>
+            <ul class="header__submenu">
+              <li><a href="../solutions/erp.html">ERP Complet</a></li>
+              <li><a href="../solutions/ecommerce.html">E-commerce Maroc</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html" class="header__link active">Réalisations</a></li>
+          <li><a href="../contact/index.html" class="header__link">Contact</a></li>
+          <li><a href="../blog/index.html" class="header__link">Blog</a></li>
+        </ul>
+        <a href="../contact/index.html" class="btn btn--primary header__cta">Devis gratuit</a>
+        <button class="header__toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="header__mobile-menu">
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
+          <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
+          <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
+          <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
+          <li><a href="../solutions/erp.html">Solutions ERP</a></li>
+          <li><a href="../solutions/ecommerce.html">E-commerce Maroc</a></li>
+          <li><a href="index.html">Réalisations</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="hero__mesh animated-gradient"></div>
+    <div class="container">
+      <div class="hero__badge">
+        <span class="badge__dot"></span>
+        Portfolio +50 Projets
+      </div>
+      <h1 class="hero__title">
+        <span class="split-line"><span>Nos Réalisations</span></span>
+        <span class="split-line accent"><span>Web au Maroc</span></span>
+      </h1>
+      <p class="hero__subtitle" style="max-width: 700px; margin: 0 auto;">
+        Plus de 50 projets réussis pour des entreprises marocaines : sites vitrines, 
+        e-commerce, applications web sur mesure. Découvrez notre expertise en action.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION FILTRES -->
+  <section class="services" style="padding-top: var(--space-16); padding-bottom: var(--space-8);">
+    <div class="container">
+      <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-12);">
+        <button class="btn btn--primary" data-filter="all">Tous les projets</button>
+        <button class="btn btn--ghost" data-filter="website">Sites Web</button>
+        <button class="btn btn--ghost" data-filter="ecommerce">E-commerce</button>
+        <button class="btn btn--ghost" data-filter="custom">Sur Mesure</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PROJETS -->
+  <section class="projects" style="padding: var(--space-8) 0 var(--space-24);">
+    <div class="container">
+      <div class="projects__grid stagger-children" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-8);">
+        
+        <!-- Projet 1: Ascrea -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                ASCREA
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Site Vitrine
+            </div>
+          </div>
+          <h3 class="card__title">Ascrea.ma</h3>
+          <p class="card__description">
+            Site vitrine professionnel pour une entreprise de services. Design moderne, 
+            optimisé SEO, développé avec WordPress pour faciliter la gestion du contenu.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WordPress</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SEO</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Responsive</span>
+          </div>
+          <a href="https://ascrea.ma" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 2: Barcelona Tour -->
+        <article class="card card--glass reveal project-item" data-category="custom">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/>
+              </svg>
+              <div style="font-size: var(--text-2xl); font-weight: 700; color: white; margin-top: var(--space-3);">
+                BARCELONA TOUR
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: white; color: var(--color-accent); padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Application Web
+            </div>
+          </div>
+          <h3 class="card__title">Barcelona-Tour.com</h3>
+          <p class="card__description">
+            Plateforme de réservation de tours touristiques complète. Backend Laravel, 
+            Frontend Vue.js, intégration Stripe pour les paiements en ligne sécurisés.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Laravel</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Vue.js</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Stripe</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">API REST</span>
+          </div>
+          <a href="https://barcelona-tour.com" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 3: Rivaz -->
+        <article class="card card--glass reveal project-item" data-category="ecommerce">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #BFDBFE 0%, #93C5FD 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+              <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                RIVAZ
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              E-commerce
+            </div>
+          </div>
+          <h3 class="card__title">Rivaz.ma</h3>
+          <p class="card__description">
+            Boutique en ligne complète pour la vente de produits. WooCommerce optimisé, 
+            intégration CMI pour paiements locaux, gestion stock automatisée.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WooCommerce</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">CMI</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Multi-devises</span>
+          </div>
+          <a href="https://rivaz.ma" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 4: Starenov -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                STARENOV
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Site Vitrine
+            </div>
+          </div>
+          <h3 class="card__title">Starenov.ma</h3>
+          <p class="card__description">
+            Site vitrine pour entreprise de rénovation. Design épuré, galerie photos optimisée, 
+            formulaire de contact avancé. HTML5, CSS3, JavaScript vanilla.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">HTML5</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">CSS3</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">JavaScript</span>
+          </div>
+          <a href="https://starenov.ma" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 5: Loutacar -->
+        <article class="card card--glass reveal project-item" data-category="custom">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <path d="M5 17h-2v-11l8-4 8 4v11h-2"/>
+                <path d="M9 17v-4h6v4"/>
+                <circle cx="7" cy="12" r="1"/>
+                <circle cx="17" cy="12" r="1"/>
+              </svg>
+              <div style="font-size: var(--text-2xl); font-weight: 700; color: white; margin-top: var(--space-3);">
+                LOUTACAR
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: white; color: var(--color-accent); padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Application Web
+            </div>
+          </div>
+          <h3 class="card__title">Loutacar.ma</h3>
+          <p class="card__description">
+            Plateforme de location de voitures en ligne. Système de réservation, 
+            gestion flotte véhicules, paiements sécurisés. PHP, MySQL, Bootstrap responsive.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">PHP</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">MySQL</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Bootstrap</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Réservation</span>
+          </div>
+          <a href="https://loutacar.ma" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 6: 1Moment Parapharmacie -->
+        <article class="card card--glass reveal project-item" data-category="ecommerce">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #BFDBFE 0%, #93C5FD 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                <path d="M12 7v5"/>
+                <path d="M9.5 9.5l5 5"/>
+                <path d="M14.5 9.5l-5 5"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                1MOMENT
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              E-commerce
+            </div>
+          </div>
+          <h3 class="card__title">1Moment Parapharmacie</h3>
+          <p class="card__description">
+            Boutique en ligne complète de produits parapharmaceutiques. Catalogue 500+ articles, 
+            paiement CMI sécurisé, livraison Maroc. SEO optimisé pour mots-clés santé.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WooCommerce</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">CMI</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SEO Santé</span>
+          </div>
+          <a href="https://1moment.ma/" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 7: Carré d'As Design -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                CARRÉ D'AS
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Portfolio
+            </div>
+          </div>
+          <h3 class="card__title">Carré d'As Design</h3>
+          <p class="card__description">
+            Site portfolio créatif pour agence de design. Galerie projets dynamique, 
+            animations CSS3 avancées, formulaire contact intégré. Design épuré moderne.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">HTML5</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">CSS3</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Animations</span>
+          </div>
+          <a href="https://carredasdesign.com/" target="_blank" rel="noopener" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-6);">
+            Visiter le site →
+          </a>
+        </article>
+
+        <!-- Projet 8: La Villette Bouskoura -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <div style="font-size: var(--text-lg); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                LA VILLETTE
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Immobilier
+            </div>
+          </div>
+          <h3 class="card__title">La Villette Bouskoura</h3>
+          <p class="card__description">
+            Site vitrine promoteur immobilier Maroc. Présentation projets résidentiels, 
+            visite virtuelle 360°, formulaire contact leads qualifiés. SEO local Casablanca.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WordPress</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SEO Local</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">360°</span>
+          </div>
+        </article>
+
+        <!-- Projet 9: Dr. Sakina Yaalaoui -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+              <div style="font-size: var(--text-lg); font-weight: 700; color: white; margin-top: var(--space-3);">
+                DR. YAALAOUI
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: white; color: var(--color-accent); padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Médical
+            </div>
+          </div>
+          <h3 class="card__title">Dr. Sakina Yaalaoui</h3>
+          <p class="card__description">
+            Site professionnel médecin Casablanca. Prise rendez-vous en ligne, présentation services, 
+            blog santé. Responsive mobile-first, SEO santé Maroc optimisé.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WordPress</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Réservation</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SEO Santé</span>
+          </div>
+        </article>
+
+        <!-- Projet 10: Yemma Ingénierie -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: white; margin-top: var(--space-3);">
+                YEMMA
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: white; color: var(--color-accent); padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              B2B
+            </div>
+          </div>
+          <h3 class="card__title">Yemma Ingénierie</h3>
+          <p class="card__description">
+            Site corporate bureau d'études technique. Présentation expertises BTP, portfolio projets, 
+            demande devis en ligne. Design professionnel confiance clients B2B.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WordPress</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">B2B</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Corporate</span>
+          </div>
+        </article>
+
+        <!-- Projet 11: Mizan -->
+        <article class="card card--glass reveal project-item" data-category="custom">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: white; margin-top: var(--space-3);">
+                MIZAN
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: white; color: var(--color-accent); padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Application Web
+            </div>
+          </div>
+          <h3 class="card__title">Mizan Platform</h3>
+          <p class="card__description">
+            Application web gestion comptabilité Maroc. Multi-utilisateurs, génération factures automatique, 
+            reporting avancé. Laravel backend, Vue.js frontend SPA moderne.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Laravel</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">Vue.js</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SaaS</span>
+          </div>
+        </article>
+
+        <!-- Projet 12: Sinertech -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #BFDBFE 0%, #93C5FD 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                SINERTECH
+              </div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; background: var(--color-accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: var(--text-sm); font-weight: 600;">
+              Industrie
+            </div>
+          </div>
+          <h3 class="card__title">Sinertech</h3>
+          <p class="card__description">
+            Site vitrine entreprise solutions énergétiques. Présentation services techniques, 
+            catalogue produits, formulaire devis. SEO industrie Maroc optimisé.
+          </p>
+          <div style="margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">WordPress</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">SEO</span>
+            <span style="padding: 4px 12px; background: rgba(30, 64, 175, 0.1); color: var(--color-accent); border-radius: 16px; font-size: var(--text-sm);">B2B</span>
+          </div>
+        </article>
+
+        <!-- Projet Placeholder 13 -->
+        <article class="card card--glass reveal project-item" data-category="website">
+          <div class="card__image" style="position: relative; aspect-ratio: 16/10; background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-radius: 12px; overflow: hidden; margin-bottom: var(--space-6);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+              <div style="font-size: var(--text-xl); font-weight: 700; color: var(--color-accent); margin-top: var(--space-3);">
+                VOTRE PROJET
+              </div>
+            </div>
+          </div>
+          <h3 class="card__title">Prochain Projet...</h3>
+          <p class="card__description">
+            Votre entreprise mérite une présence digitale professionnelle. 
+            Contactez-nous pour discuter de votre projet web et obtenir un devis personnalisé.
+          </p>
+          <a href="../contact/index.html" class="btn btn--primary" style="width: 100%; margin-top: var(--space-6);">
+            Démarrer mon projet →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION STATISTIQUES -->
+  <section class="about" style="padding: var(--space-24) 0;">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin-bottom: var(--space-16);">
+        <p class="section-header__subtitle">Notre Impact</p>
+        <h2 class="section-header__title">Des Résultats Mesurables</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-8);">
+        <div class="card card--glass reveal" style="text-align: center; padding: var(--space-8);">
+          <div style="font-size: 48px; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-3);">
+            +50
+          </div>
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2); color: var(--color-text);">
+            Projets Livrés
+          </h3>
+          <p style="color: var(--color-text-secondary);">
+            Sites web et applications réalisés depuis 2020
+          </p>
+        </div>
+
+        <div class="card card--glass reveal" style="text-align: center; padding: var(--space-8);">
+          <div style="font-size: 48px; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-3);">
+            100%
+          </div>
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2); color: var(--color-text);">
+            Satisfaction Client
+          </h3>
+          <p style="color: var(--color-text-secondary);">
+            Tous nos clients recommandent JHL Solutions
+          </p>
+        </div>
+
+        <div class="card card--glass reveal" style="text-align: center; padding: var(--space-8);">
+          <div style="font-size: 48px; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-3);">
+            +40
+          </div>
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2); color: var(--color-text);">
+            Clients Actifs
+          </h3>
+          <p style="color: var(--color-text-secondary);">
+            Entreprises marocaines qui nous font confiance
+          </p>
+        </div>
+
+        <div class="card card--glass reveal" style="text-align: center; padding: var(--space-8);">
+          <div style="font-size: 48px; font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-3);">
+            24/7
+          </div>
+          <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2); color: var(--color-text);">
+            Support Disponible
+          </h3>
+          <p style="color: var(--color-text-secondary);">
+            Assistance technique rapide et efficace
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CTA -->
+  <section class="cta" style="margin-top: var(--space-24);">
+    <div class="container">
+      <div class="cta__content reveal">
+        <h2 class="cta__title">Prêt à Lancer Votre Projet Web ?</h2>
+        <p class="cta__description">
+          Rejoignez nos clients satisfaits et donnez vie à votre projet digital avec JHL Solutions.
+        </p>
+        <div class="cta__buttons">
+          <a href="../contact/index.html" class="btn btn--primary btn--large">
+            Demander un devis gratuit
+          </a>
+          <a href="tel:+212667246440" class="btn btn--ghost btn--large">
+            Appeler maintenant
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Colonne 1: À propos -->
+        <div class="footer__column">
+          <h3 class="footer__title">JHL Solutions</h3>
+          <p class="footer__description">
+            Agence digitale marocaine spécialisée en création de sites web, référencement SEO, 
+            marketing digital et solutions logicielles pour entreprises.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/jhl.solution/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/jhlsolution/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne 2: Services -->
+        <div class="footer__column">
+          <h3 class="footer__title">Services</h3>
+          <ul class="footer__links">
+            <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
+            <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
+            <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
+            <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3: Solutions -->
+        <div class="footer__column">
+          <h3 class="footer__title">Solutions</h3>
+          <ul class="footer__links">
+            <li><a href="../solutions/erp.html">ERP Complet</a></li>
+            <li><a href="../solutions/erp.html#crm">CRM Client</a></li>
+            <li><a href="../solutions/erp.html#inventory">Gestion Stock</a></li>
+            <li><a href="../solutions/erp.html#pos">Point de Vente</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4: Contact -->
+        <div class="footer__column">
+          <h3 class="footer__title">Contact</h3>
+          <ul class="footer__links">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <a href="tel:+212667246440">+212 667 246 440</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:contact@jhl.ma">contact@jhl.ma</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Casablanca, Maroc
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          Copyright © JHL Solutions 2026 — Tous droits réservés
+        </p>
+        <div class="footer__legal">
+          <a href="../mentions-legales.html">Mentions légales</a>
+          <span>•</span>
+          <a href="../politique-confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  
+  <!-- Script Filtrage Projets -->
+  <script>
+    // Filtrage simple des projets
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        // Mise à jour des boutons actifs
+        filterButtons.forEach(btn => {
+          btn.classList.remove('btn--primary');
+          btn.classList.add('btn--ghost');
+        });
+        button.classList.remove('btn--ghost');
+        button.classList.add('btn--primary');
+        
+        // Filtrage des projets
+        projectItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

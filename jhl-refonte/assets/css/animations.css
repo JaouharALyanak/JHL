@@ -143,6 +143,215 @@
 }
 
 /* ============================================
+   CREATIVE VECTORS ANIMATIONS
+   ============================================ */
+
+/* Float Animation pour icônes code */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.creative-vector[data-animation="float"] {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Animation pour ampoule */
+@keyframes creativePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.creative-vector[data-animation="pulse"] {
+  animation: creativePulse 2.5s ease-in-out infinite;
+}
+
+/* Draw Animation pour stylo */
+@keyframes draw {
+  0%, 100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-5deg) translateX(-5px);
+  }
+  75% {
+    transform: rotate(5deg) translateX(5px);
+  }
+}
+
+.creative-vector[data-animation="draw"] {
+  animation: draw 3s ease-in-out infinite;
+}
+
+/* Color Shift Animation pour palette */
+@keyframes colorshift {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.creative-vector[data-animation="colorshift"] circle {
+  animation: colorshift 2s ease-in-out infinite;
+}
+
+.creative-vector[data-animation="colorshift"] circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.creative-vector[data-animation="colorshift"] circle:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.creative-vector[data-animation="colorshift"] circle:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.creative-vector[data-animation="colorshift"] circle:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.creative-vector[data-animation="colorshift"] circle:nth-child(6) {
+  animation-delay: 1s;
+}
+
+/* Move Animation pour curseur */
+@keyframes move {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15px, -10px);
+  }
+  50% {
+    transform: translate(30px, 5px);
+  }
+  75% {
+    transform: translate(15px, 20px);
+  }
+}
+
+.creative-vector[data-animation="move"] {
+  animation: move 5s ease-in-out infinite;
+}
+
+/* Slide Animation pour écran */
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.creative-vector[data-animation="slide"] {
+  animation: slide 4s ease-in-out infinite;
+}
+
+/* Launch Animation pour fusée */
+@keyframes launch {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.creative-vector[data-animation="launch"] {
+  animation: launch 3s ease-in-out infinite;
+}
+
+/* Stack Animation pour layers */
+@keyframes stack {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-3px);
+  }
+  66% {
+    transform: translateY(3px);
+  }
+}
+
+.creative-vector[data-animation="stack"] rect:nth-child(1) {
+  animation: stack 2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.creative-vector[data-animation="stack"] rect:nth-child(2) {
+  animation: stack 2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.creative-vector[data-animation="stack"] rect:nth-child(3) {
+  animation: stack 2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+/* Sparkle Animation pour étoiles */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+.creative-vector[data-animation="sparkle"] {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Conteneur des vecteurs créatifs */
+.creative-vectors-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.creative-vectors-container svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+/* Responsive : masquer certains vecteurs sur mobile */
+@media (max-width: 768px) {
+  .creative-vectors-container {
+    opacity: 0.3;
+  }
+  
+  /* Masquer quelques vecteurs pour réduire la charge visuelle */
+  .creative-vector[data-animation="move"],
+  .creative-vector[data-animation="slide"],
+  .creative-vector[data-animation="colorshift"] {
+    display: none;
+  }
+}
+
+/* ============================================
    COUNTER ANIMATIONS
    ============================================ */
 @keyframes counterPulse {
