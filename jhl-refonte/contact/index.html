@@ -94,16 +94,19 @@
             <div class="form-group">
               <label class="form-label" for="name">Nom complet *</label>
               <input type="text" id="name" name="name" class="form-input" required>
+              <span class="form-error" id="nameError"></span>
             </div>
             
             <div class="form-group">
               <label class="form-label" for="email">Email professionnel *</label>
               <input type="email" id="email" name="email" class="form-input" required>
+              <span class="form-error" id="emailError"></span>
             </div>
             
             <div class="form-group">
               <label class="form-label" for="phone">Téléphone *</label>
               <input type="tel" id="phone" name="phone" class="form-input" placeholder="+212 6XX XXX XXX" required>
+              <span class="form-error" id="phoneError"></span>
             </div>
             
             <div class="form-group">
@@ -119,6 +122,7 @@
                 <option value="maintenance">Maintenance Web</option>
                 <option value="autre">Autre</option>
               </select>
+              <span class="form-error" id="serviceError"></span>
             </div>
             
             <div class="form-group">
@@ -131,11 +135,13 @@
                 <option value="20000-50000">20 000 - 50 000 DH</option>
                 <option value="plus-50000">Plus de 50 000 DH</option>
               </select>
+              <span class="form-error" id="budgetError"></span>
             </div>
             
             <div class="form-group">
               <label class="form-label" for="message">Décrivez votre projet *</label>
               <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+              <span class="form-error" id="messageError"></span>
             </div>
             
             <button type="submit" class="btn btn--primary" style="width: 100%;">Envoyer la demande</button>
@@ -259,7 +265,7 @@
 
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/animations.js"></script>
-  <script src="../assets/js/form.js"></script>
+  <script src="../assets/js/form.js?v=20260407"></script>
 
 </body>
 </html>

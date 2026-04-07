@@ -78,28 +78,42 @@ function displayErrors(errors) {
 // ============================================
 async function submitForm(formData) {
   try {
-    // Ici, vous pouvez implémenter l'appel à votre API
-    // Pour l'instant, simulons un envoi
-    
-    // Option 1 : Envoi via Laravel (route web.php)
-    const response = await fetch('/contact', {
+    // Envoi vers contact.php (chemin absolu depuis racine)
+    const response = await fetch('/contact.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
+        'Accept': 'application/json'
       },
       body: JSON.stringify(formData)
     });
     
-    if (!response.ok) {
-      throw new Error('Erreur lors de l\'envoi du formulaire');
+    const result = await response.json();
+    
+    // Log SMTP debug info to console
+    if (result.smtp_debug && result.smtp_debug.length > 0) {
+      console.group('📧 SMTP Debug Info');
+      result.smtp_debug.forEach(msg => console.log(msg));
+      console.groupEnd();
     }
     
-    const result = await response.json();
+    // Log email status
+    console.log('📬 Email sent:', result.email_sent);
+    console.log('💾 Saved to file:', result.saved_to_file);
+    
+    if (!response.ok) {
+      // Gérer les erreurs de validation
+      if (result.errors) {
+        displayErrors(result.errors);
+        throw new Error('Erreur de validation');
+      }
+      throw new Error(result.message || 'Erreur lors de l\'envoi du formulaire');
+    }
+    
     return result;
     
   } catch (error) {
-    console.error('Erreur:', error);
+    console.error('❌ Erreur:', error);
     throw error;
   }
 }

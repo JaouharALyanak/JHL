@@ -5,6 +5,14 @@ RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+# IMPORTANT : Rediriger POST /contact vers /contact.php
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^contact$ /contact.php [L,QSA]
+
+# Exclure les fichiers .php des règles de réécriture
+RewriteCond %{REQUEST_URI} \.php$ [NC]
+RewriteRule .* - [L]
+
 # Redirection 301 : /index.html → / (URLs propres SEO)
 RewriteCond %{THE_REQUEST} ^GET\ /index\.html\ HTTP
 RewriteRule ^index\.html$ / [R=301,L]
