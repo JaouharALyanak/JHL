@@ -3,10 +3,11 @@
 User-agent: *
 Allow: /
 
-# Disallow admin et fichiers temporaires
-Disallow: /admin/
-Disallow: /tmp/
+# Disallow fichiers sensibles et temporaires
+Disallow: /contact.php
+Disallow: /contacts.json
 Disallow: /*.json$
+Disallow: /tmp/
 
 # Sitemap
 Sitemap: https://jhl.ma/sitemap.xml
