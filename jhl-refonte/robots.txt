@@ -10,7 +10,7 @@ Disallow: /*.json$
 Disallow: /tmp/
 
 # Sitemap
-Sitemap: https://jhl.ma/sitemap.xml
+Sitemap: https://www.jhl.ma/sitemap.xml
 
 # Crawl-delay (optionnel)
 Crawl-delay: 1
