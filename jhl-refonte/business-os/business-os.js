@@ -185,23 +185,41 @@ function setSubmitState(btn, loading) {
 }
 
 // ============================================
-// SOUMISSION — FORMSPREE (service externe)
+// SOUMISSION — PHP SMTP (même config que contact.php)
 // ============================================
-async function submitBosForm(form, formData) {
-  const endpoint = form.getAttribute('action');
-  if (!endpoint) {
-    throw new Error('Endpoint de formulaire non configuré.');
-  }
+async function submitBosForm(form) {
+  // Construire l'objet de données
+  const formData = new FormData(form);
+  const data = {};
+
+  // Champs simples
+  [
+    'bos_nom', 'bos_entreprise', 'bos_email', 'bos_whatsapp',
+    'bos_ville', 'bos_secteur', 'bos_volume_mensuel', 'bos_volume_ia',
+    'bos_difficulte', 'bos_budget', 'bos_participation', 'bos_consentement'
+  ].forEach(name => {
+    data[name] = formData.get(name) || '';
+  });
+
+  // Checkboxes multiples (plateformes)
+  const platforms = formData.getAll('bos_plateformes[]');
+  data['bos_plateformes'] = platforms.length > 0 ? platforms.join(', ') : 'Non spécifié';
+
+  // Endpoint PHP (à la racine du site, comme contact.php)
+  const endpoint = '../business-os-form.php';
 
   const response = await fetch(endpoint, {
     method: 'POST',
-    headers: { 'Accept': 'application/json' },
-    body: formData
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(data)
   });
 
   if (!response.ok) {
-    const data = await response.json().catch(() => ({}));
-    throw new Error(data.error || `Erreur serveur (${response.status})`);
+    const result = await response.json().catch(() => ({}));
+    throw new Error(result.message || `Erreur serveur (${response.status})`);
   }
 
   return await response.json();
@@ -317,20 +335,7 @@ function initBosForm() {
     if (globalError) globalError.classList.remove('visible');
 
     try {
-      const formData = new FormData(form);
-
-      // Collecter les checkboxes multiples (plateformes)
-      const platforms = [];
-      form.querySelectorAll('input[name="bos_plateformes[]"]:checked').forEach(cb => {
-        platforms.push(cb.value);
-      });
-      formData.delete('bos_plateformes[]');
-      formData.append('bos_plateformes', platforms.join(', ') || 'Non spécifié');
-
-      // Supprimer le honeypot des données envoyées
-      formData.delete('_hp_business_os');
-
-      await submitBosForm(form, formData);
+      await submitBosForm(form);
       showBosSuccess(form);
 
     } catch (err) {

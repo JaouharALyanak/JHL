@@ -670,24 +670,13 @@
           <!-- Message d'erreur global -->
           <div id="bosFormError" class="bos-form-error-msg" role="alert" aria-live="assertive"></div>
 
-          <!--
-            IMPORTANT — CONFIGURATION FORMSPREE :
-            Remplacez "https://formspree.io/f/VOTRE_ID" par votre endpoint Formspree réel.
-            Créez un compte gratuit sur formspree.io et créez un nouveau formulaire.
-            L'URL de destination de réception sera votre adresse e-mail (ex: contact@jhl.ma).
-          -->
           <form
             id="bosForm"
             class="bos-form"
-            action="https://formspree.io/f/VOTRE_ENDPOINT_ICI"
-            method="POST"
             novalidate
             aria-label="Formulaire de participation au programme de test JHL Business OS"
           >
-            <!-- Champ caché Formspree -->
-            <input type="hidden" name="_subject" value="🚀 JHL Business OS — Nouvelle demande de test">
-            <input type="hidden" name="_language" value="fr">
-
+            <!-- Champ caché anti-spam (honeypot ajouté dynamiquement par JS) -->
             <div class="bos-form__fields">
               <div class="bos-form__grid">
 
