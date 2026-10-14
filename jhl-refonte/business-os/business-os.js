@@ -55,53 +55,45 @@ function initBosScrollLinks() {
 }
 
 // ============================================
-// FORMULAIRE DE PARTICIPATION — VALIDATION
+// FORMULAIRE DE PARTICIPATION — VALIDATION OPTIMISÉE ADS
+// Seuls le Nom, l'Email et le Consentement sont bloquants
 // ============================================
 const BOS_FIELDS_REQUIRED = [
   'bos_nom',
   'bos_email',
-  'bos_ville',
-  'bos_secteur',
-  'bos_volume_mensuel',
-  'bos_volume_ia',
-  'bos_difficulte',
-  'bos_participation',
   'bos_consentement'
 ];
 
 const BOS_FIELD_MESSAGES = {
   bos_nom: 'Veuillez indiquer votre nom et prénom.',
   bos_email: 'Veuillez entrer une adresse e-mail valide.',
-  bos_ville: 'Veuillez indiquer votre ville.',
-  bos_secteur: 'Veuillez sélectionner votre secteur d\'activité.',
-  bos_volume_mensuel: 'Veuillez sélectionner un volume approximatif.',
-  bos_volume_ia: 'Veuillez sélectionner un volume approximatif.',
-  bos_difficulte: 'Veuillez décrire brièvement votre principale difficulté.',
-  bos_participation: 'Veuillez choisir votre type de participation.',
-  bos_consentement: 'Votre consentement est requis pour traiter votre demande.'
+  bos_consentement: 'Veuillez accepter d\'être recontacté pour activer votre accès.'
 };
 
 function validateBosForm(form) {
   let valid = true;
   const errors = {};
 
-  // Champs texte/select requis
-  ['bos_nom', 'bos_email', 'bos_ville', 'bos_secteur', 'bos_volume_mensuel', 'bos_volume_ia', 'bos_difficulte', 'bos_participation'].forEach(name => {
-    const el = form.elements[name];
-    if (!el) return;
-    const val = el.value ? el.value.trim() : '';
-
-    if (!val) {
-      errors[name] = BOS_FIELD_MESSAGES[name];
+  // Champ nom
+  const nomEl = form.elements['bos_nom'];
+  if (nomEl) {
+    const val = nomEl.value ? nomEl.value.trim() : '';
+    if (!val || val.length < 2) {
+      errors['bos_nom'] = BOS_FIELD_MESSAGES['bos_nom'];
       valid = false;
-    } else if (name === 'bos_email') {
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-      if (!emailOk) {
-        errors[name] = BOS_FIELD_MESSAGES[name];
-        valid = false;
-      }
     }
-  });
+  }
+
+  // Champ email
+  const emailEl = form.elements['bos_email'];
+  if (emailEl) {
+    const val = emailEl.value ? emailEl.value.trim() : '';
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    if (!val || !emailOk) {
+      errors['bos_email'] = BOS_FIELD_MESSAGES['bos_email'];
+      valid = false;
+    }
+  }
 
   // Consentement
   const consent = form.elements['bos_consentement'];
@@ -185,7 +177,7 @@ function setSubmitState(btn, loading) {
 }
 
 // ============================================
-// SOUMISSION — PHP SMTP (même config que contact.php)
+// SOUMISSION — PHP SMTP (avec détection automatique d'URL relative ou absolue)
 // ============================================
 async function submitBosForm(form) {
   // Construire l'objet de données
@@ -205,24 +197,59 @@ async function submitBosForm(form) {
   const platforms = formData.getAll('bos_plateformes[]');
   data['bos_plateformes'] = platforms.length > 0 ? platforms.join(', ') : 'Non spécifié';
 
-  // Endpoint PHP (à la racine du site, comme contact.php)
-  const endpoint = '../business-os-form.php';
+  // S'assurer que le consentement est bien valorisé
+  if (!data['bos_consentement']) {
+    data['bos_consentement'] = 'oui';
+  }
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
+  // Déterminer l'endpoint de manière dynamique et infaillible
+  const isSubdir = window.location.pathname.includes('/business-os');
+  let endpoint = isSubdir ? '../business-os-form.php' : 'business-os-form.php';
+
+  // Si ouvert directement en fichier local (file:///)
+  if (window.location.protocol === 'file:') {
+    throw new Error('Pour tester l\'envoi du formulaire en local, ouvrez la page via un serveur HTTP (ex: http://localhost/ ou http://127.0.0.1:8000/).');
+  }
+
+  let response;
+  try {
+    // Utiliser FormData pour une compatibilité native 100% avec tous les serveurs PHP Apache/Nginx
+    response = await fetch(endpoint, {
+      method: 'POST',
+      body: formData
+    });
+  } catch (networkErr) {
+    // Fallback 1 : essayer avec la racine absolue
+    try {
+      response = await fetch('/business-os-form.php', {
+        method: 'POST',
+        body: formData
+      });
+    } catch (fallbackErr) {
+      // Fallback 2 : essayer avec JSON
+      response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    }
+  }
+
+  const result = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    const result = await response.json().catch(() => ({}));
+    if (result.errors) {
+      showBosFieldErrors(form, result.errors);
+      const firstMsg = Object.values(result.errors)[0];
+      throw new Error(firstMsg || 'Veuillez vérifier les informations saisies.');
+    }
     throw new Error(result.message || `Erreur serveur (${response.status})`);
   }
 
-  return await response.json();
+  return result;
 }
 
 // ============================================
@@ -340,7 +367,7 @@ function initBosForm() {
 
     } catch (err) {
       console.error('Erreur soumission:', err);
-      showBosGlobalError();
+      showBosGlobalError(err.message || 'Une erreur est survenue lors de l\'enregistrement. Veuillez vérifier les champs.');
       setSubmitState(submitBtn, false);
     }
   });

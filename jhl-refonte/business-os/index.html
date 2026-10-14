@@ -33,11 +33,13 @@
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png?v=2">
+  <link rel="shortcut icon" href="../assets/images/favicon.png?v=2">
 
-  <!-- Preconnect -->
+  <!-- Google Fonts: Inter (Moderne, ultra-lisible et pro) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheets JHL.ma existants -->
   <link rel="preload" href="../assets/css/main.css" as="style">
@@ -47,7 +49,7 @@
   <link rel="stylesheet" href="../assets/css/sections.css">
 
   <!-- Styles spécifiques Business OS (isolés) -->
-  <link rel="stylesheet" href="business-os.css">
+  <link rel="stylesheet" href="business-os.css?v=2">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -78,71 +80,30 @@
   }
   </script>
 </head>
-<body>
+<body class="bos-landing-mode">
 
   <!-- ============================================
-       HEADER NAVIGATION
+       TOP BAR MINIMALISTE (100% FOCUS CONVERSION ADS)
        ============================================ -->
-  <header class="header" role="banner">
+  <nav class="bos-topbar" aria-label="Logo et contact rapide">
     <div class="container">
-      <nav class="header__nav" aria-label="Navigation principale">
-        <!-- Logo -->
-        <a href="../index.html" class="header__logo" aria-label="JHL Solutions - Retour à l'accueil">
-          <img src="../assets/images/logo.svg" alt="JHL Solutions Logo" width="120" height="40">
+      <div class="bos-topbar__inner">
+        <a href="index.html" class="bos-topbar__logo" aria-label="JHL Solutions">
+          <img src="../assets/images/logo.svg" alt="JHL Solutions" width="110" height="34">
+          <span class="bos-topbar__badge">BUSINESS OS</span>
         </a>
-
-        <!-- Menu Desktop -->
-        <ul class="header__menu" role="list">
-          <li><a href="../index.html" class="header__link">Accueil</a></li>
-          <li class="header__dropdown">
-            <a href="../services/creation-site-web.html" class="header__link">
-              Services <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M6 8L2 4h8L6 8z"/></svg>
-            </a>
-            <ul class="header__submenu" role="list">
-              <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
-              <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
-              <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
-              <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
-            </ul>
-          </li>
-          <li><a href="../solutions/erp.html" class="header__link">Solutions ERP</a></li>
-          <li><a href="../realisations/index.html" class="header__link">Réalisations</a></li>
-          <li><a href="../blog/index.html" class="header__link">Blog</a></li>
-          <li>
-            <a href="index.html" class="header__link active" aria-current="page">
-              Business OS <span class="bos-nav-badge">BÊTA</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- CTA -->
-        <a href="#bos-form" class="btn btn--primary header__cta" data-bos-track="cta_header_click">Rejoindre le test</a>
-
-        <!-- Mobile Toggle -->
-        <button class="header__toggle" aria-label="Menu mobile" aria-expanded="false" aria-controls="bossMobileMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div class="header__mobile-menu" id="bossMobileMenu" role="dialog" aria-label="Menu mobile">
-        <ul role="list">
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
-          <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
-          <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
-          <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
-          <li><a href="../solutions/erp.html">Solutions ERP</a></li>
-          <li><a href="../realisations/index.html">Réalisations</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="index.html" aria-current="page"><strong>Business OS</strong></a></li>
-          <li><a href="../contact/index.html">Contact</a></li>
-        </ul>
+        <div class="bos-topbar__right">
+          <a href="https://wa.me/212667246440?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20JHL%20Business%20OS" target="_blank" rel="noopener" class="bos-topbar__whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.505-4.495 9.969-10 9.969-1.748 0-3.376-.452-4.797-1.244l-5.203 1.364 1.39-5.074c-.903-1.488-1.39-3.218-1.39-5.015 0-5.505 4.495-9.969 10-9.969s10 4.464 10 9.969z"/></svg>
+            <span>Assistance WhatsApp</span>
+          </a>
+          <a href="#bos-form" class="bos-topbar__btn">
+            Essayer gratuitement
+          </a>
+        </div>
       </div>
     </div>
-  </header>
+  </nav>
 
   <main id="main-content">
 
@@ -156,29 +117,48 @@
 
           <!-- Contenu texte -->
           <div class="bos-hero__content">
-            <span class="bos-badge-new" role="status">
+            <div class="bos-badge-new" role="status">
               <span class="bos-badge-new__dot" aria-hidden="true"></span>
-              Nouveau projet · Programme de test en préparation
-            </span>
+              <span>Offre Bêta Exclusive Maroc · Places Limitées</span>
+            </div>
 
             <h1 class="bos-hero__title" id="bos-hero-title">
-              Et si votre entreprise répondait à ses clients,
-              <span class="accent">même quand vous êtes occupé ?</span>
+              Ne perdez plus aucun client sur WhatsApp et Instagram.
+              <span class="accent">L'IA répond pour vous en Darija & Français 24/7.</span>
             </h1>
 
             <p class="bos-hero__subtitle">
-              JHL Business OS ambitionne de vous aider à centraliser vos conversations, automatiser vos réponses et mieux suivre vos prospects grâce à l'IA — en Darija, en français et dans d'autres langues.
+              Centralisez tous vos messages (WhatsApp, Instagram, Messenger), répondez instantanément aux questions de prix et disponibilité, et relancez automatiquement vos prospects sans lever le petit doigt.
             </p>
 
+            <div class="bos-hero__proof">
+              <div class="bos-proof-item">
+                <span class="bos-proof-check">✓</span>
+                <span>Réponse en moins de <strong>5 secondes</strong></span>
+              </div>
+              <div class="bos-proof-item">
+                <span class="bos-proof-check">✓</span>
+                <span>Comprend la <strong>Darija marocaine</strong></span>
+              </div>
+              <div class="bos-proof-item">
+                <span class="bos-proof-check">✓</span>
+                <span>Zéro risque : <strong>Test 100% Gratuit</strong></span>
+              </div>
+            </div>
+
             <div class="bos-hero__cta">
-              <a href="#bos-form" class="btn btn--primary btn--large" id="bos-hero-cta-main" data-bos-track="cta_hero_main">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                Rejoindre les premiers testeurs
+              <a href="#bos-form" class="btn btn--primary btn--large bos-hero-btn-glow" id="bos-hero-cta-main" data-bos-track="cta_hero_main">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Réserver mon accès pilote gratuit
               </a>
-              <a href="#bos-solution" class="btn btn--ghost btn--large" id="bos-hero-cta-secondary" data-bos-track="cta_hero_secondary">
-                Découvrir le concept
+              <a href="#bos-demo" class="btn btn--ghost btn--large" id="bos-hero-cta-secondary" data-bos-track="cta_hero_secondary">
+                Voir la démonstration en direct
               </a>
             </div>
+            
+            <p class="bos-hero-reassurance">
+              🔒 Installation guidée par nos ingénieurs à Casablanca • Sans engagement • 30 secondes pour postuler
+            </p>
           </div>
 
           <!-- Maquette produit -->
@@ -389,9 +369,9 @@
     </section>
 
     <!-- ============================================
-         SECTION D — LA DARIJA
+         SECTION D — LA DARIJA / DEMO
          ============================================ -->
-    <section class="bos-darija" id="bos-darija" aria-labelledby="bos-darija-title">
+    <section class="bos-darija" id="bos-demo" aria-labelledby="bos-darija-title">
       <div class="container">
         <div class="bos-section-header">
           <span class="bos-section-label">
@@ -641,362 +621,274 @@
     </section>
 
     <!-- ============================================
-         SECTION H — FORMULAIRE DE PARTICIPATION
+         SECTION H — FORMULAIRE DE CANDIDATURE PILOTE
          ============================================ -->
     <section class="bos-form-section" id="bos-form" aria-labelledby="bos-form-title">
       <div class="container">
-        <div class="bos-section-header">
-          <span class="bos-section-label">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            Programme de test
-          </span>
-          <h2 class="bos-section-title" id="bos-form-title">
-            Votre entreprise pourrait faire partie des premiers testeurs.
-          </h2>
-          <p class="bos-section-desc">
-            Dites-nous comment vous gérez vos clients aujourd'hui. Nous vous contacterons pour comprendre vos besoins et vous tenir informé de l'avancement du projet.
-          </p>
-        </div>
-
-        <div class="bos-form-wrapper">
-          <!-- Message de succès -->
-          <div id="bosFormSuccess" class="bos-form-success" role="status" aria-live="polite">
-            <p class="bos-form-success__title">✅ Demande bien reçue !</p>
-            <p class="bos-form-success__text">
-              Merci pour votre intérêt. Nous avons bien enregistré votre demande. Nous vous contacterons pour en savoir plus sur vos besoins et vous informer de l'avancement du projet. Aucune place n'est garantie à ce stade.
+        
+        <div class="bos-form-container-card">
+          <div class="bos-form-header-box">
+            <span class="bos-form-tag">🔥 10 Places Restantes Pour la Phase Pilote</span>
+            <h2 class="bos-form-card-title" id="bos-form-title">
+              Testez JHL Business OS Gratuitement Dans Votre Entreprise
+            </h2>
+            <p class="bos-form-card-subtitle">
+              Remplissez vos coordonnées en <strong>30 secondes</strong>. Notre équipe technique configurera votre assistant IA sur-mesure pour votre activité au Maroc.
             </p>
           </div>
 
-          <!-- Message d'erreur global -->
-          <div id="bosFormError" class="bos-form-error-msg" role="alert" aria-live="assertive"></div>
+          <!-- Grille Avantages Rapides -->
+          <div class="bos-form-benefits">
+            <div class="bos-f-benefit">
+              <span class="bos-f-icon">⚡</span>
+              <div>
+                <strong>Zéro frais de démarrage</strong>
+                <p>Accès pilote 100% gratuit sans engagement ni carte bancaire</p>
+              </div>
+            </div>
+            <div class="bos-f-benefit">
+              <span class="bos-f-icon">🤝</span>
+              <div>
+                <strong>Accompagnement VIP</strong>
+                <p>Configuration personnalisée par nos experts JHL Casablanca</p>
+              </div>
+            </div>
+            <div class="bos-f-benefit">
+              <span class="bos-f-icon">📈</span>
+              <div>
+                <strong>+40% de conversion</strong>
+                <p>Récupérez immédiatement les prospects perdus la nuit et le week-end</p>
+              </div>
+            </div>
+          </div>
 
-          <form
-            id="bosForm"
-            class="bos-form"
-            novalidate
-            aria-label="Formulaire de participation au programme de test JHL Business OS"
-          >
-            <!-- Champ caché anti-spam (honeypot ajouté dynamiquement par JS) -->
-            <div class="bos-form__fields">
-              <div class="bos-form__grid">
+          <div class="bos-form-wrapper">
+            <!-- Message de succès -->
+            <div id="bosFormSuccess" class="bos-form-success" role="status" aria-live="polite">
+              <div class="bos-success-icon-check">🎉</div>
+              <h3 class="bos-form-success__title">Félicitations, votre demande est bien enregistrée !</h3>
+              <p class="bos-form-success__text">
+                Notre équipe vous contactera dans les 24h ouvrées (par WhatsApp ou appel) pour faire le point sur votre activité et vous installer votre version de test.
+              </p>
+            </div>
 
-                <!-- Nom et prénom -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_nom">
-                    Nom et prénom <span aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="bos_nom"
-                    name="bos_nom"
-                    class="bos-form-input"
-                    placeholder="Ex : Karim Benali"
-                    autocomplete="name"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_nom"
-                  >
-                  <span class="bos-form-error" id="error_bos_nom" data-error="bos_nom" role="alert"></span>
-                </div>
+            <!-- Message d'erreur global -->
+            <div id="bosFormError" class="bos-form-error-msg" role="alert" aria-live="assertive"></div>
 
-                <!-- Nom de l'entreprise -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_entreprise">
-                    Nom de l'entreprise <span aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="bos_entreprise"
-                    name="bos_entreprise"
-                    class="bos-form-input"
-                    placeholder="Ex : Boutique El Nour"
-                    autocomplete="organization"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_entreprise"
-                  >
-                  <span class="bos-form-error" id="error_bos_entreprise" data-error="bos_entreprise" role="alert"></span>
-                </div>
+            <form
+              id="bosForm"
+              class="bos-form"
+              novalidate
+              aria-label="Formulaire d'accès pilote JHL Business OS"
+            >
+              <div class="bos-form__fields">
+                <div class="bos-form__grid">
 
-                <!-- Email -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_email">
-                    Adresse e-mail <span aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="bos_email"
-                    name="bos_email"
-                    class="bos-form-input"
-                    placeholder="votre@email.ma"
-                    autocomplete="email"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_email"
-                  >
-                  <span class="bos-form-error" id="error_bos_email" data-error="bos_email" role="alert"></span>
-                </div>
-
-                <!-- WhatsApp (optionnel) -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_whatsapp">
-                    Numéro WhatsApp
-                    <span class="bos-form-label__opt">(optionnel)</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="bos_whatsapp"
-                    name="bos_whatsapp"
-                    class="bos-form-input"
-                    placeholder="+212 6XX XXXXXX"
-                    autocomplete="tel"
-                    aria-describedby="bos_whatsapp_hint"
-                  >
-                  <span id="bos_whatsapp_hint" style="font-size:0.75rem;color:var(--color-text-muted);">Ne sera utilisé que pour vous contacter sur cette plateforme.</span>
-                </div>
-
-                <!-- Ville -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_ville">
-                    Ville au Maroc <span aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="bos_ville"
-                    name="bos_ville"
-                    class="bos-form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_ville"
-                  >
-                    <option value="">Sélectionnez votre ville</option>
-                    <option value="Casablanca">Casablanca</option>
-                    <option value="Rabat">Rabat</option>
-                    <option value="Marrakech">Marrakech</option>
-                    <option value="Fès">Fès</option>
-                    <option value="Tanger">Tanger</option>
-                    <option value="Agadir">Agadir</option>
-                    <option value="Meknès">Meknès</option>
-                    <option value="Oujda">Oujda</option>
-                    <option value="Kénitra">Kénitra</option>
-                    <option value="Tétouan">Tétouan</option>
-                    <option value="Safi">Safi</option>
-                    <option value="Mohammedia">Mohammedia</option>
-                    <option value="El Jadida">El Jadida</option>
-                    <option value="Béni Mellal">Béni Mellal</option>
-                    <option value="Nador">Nador</option>
-                    <option value="Autre">Autre</option>
-                  </select>
-                  <span class="bos-form-error" id="error_bos_ville" data-error="bos_ville" role="alert"></span>
-                </div>
-
-                <!-- Secteur d'activité -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_secteur">
-                    Secteur d'activité <span aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="bos_secteur"
-                    name="bos_secteur"
-                    class="bos-form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_secteur"
-                  >
-                    <option value="">Sélectionnez votre secteur</option>
-                    <option value="Commerce / Vente en ligne">Commerce / Vente en ligne</option>
-                    <option value="Mode et habillement">Mode et habillement</option>
-                    <option value="Alimentation / Restauration">Alimentation / Restauration</option>
-                    <option value="Immobilier">Immobilier</option>
-                    <option value="Beauté / Bien-être">Beauté / Bien-être</option>
-                    <option value="Formation / Éducation">Formation / Éducation</option>
-                    <option value="Services aux entreprises">Services aux entreprises</option>
-                    <option value="Artisanat / Produits locaux">Artisanat / Produits locaux</option>
-                    <option value="Électronique / High-tech">Électronique / High-tech</option>
-                    <option value="Automobile">Automobile</option>
-                    <option value="Santé / Médical">Santé / Médical</option>
-                    <option value="Tourisme / Voyage">Tourisme / Voyage</option>
-                    <option value="BTP / Construction">BTP / Construction</option>
-                    <option value="Autre">Autre</option>
-                  </select>
-                  <span class="bos-form-error" id="error_bos_secteur" data-error="bos_secteur" role="alert"></span>
-                </div>
-
-                <!-- Volume de demandes mensuel -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_volume_mensuel">
-                    Demandes clients reçues par mois <span aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="bos_volume_mensuel"
-                    name="bos_volume_mensuel"
-                    class="bos-form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_volume_mensuel"
-                  >
-                    <option value="">Estimez votre volume</option>
-                    <option value="Moins de 50">Moins de 50 par mois</option>
-                    <option value="50 à 150">50 à 150 par mois</option>
-                    <option value="150 à 500">150 à 500 par mois</option>
-                    <option value="500 à 1 000">500 à 1 000 par mois</option>
-                    <option value="Plus de 1 000">Plus de 1 000 par mois</option>
-                  </select>
-                  <span class="bos-form-error" id="error_bos_volume_mensuel" data-error="bos_volume_mensuel" role="alert"></span>
-                </div>
-
-                <!-- Volume IA -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_volume_ia">
-                    Clients auxquels l'IA devrait répondre / mois <span aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="bos_volume_ia"
-                    name="bos_volume_ia"
-                    class="bos-form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_volume_ia"
-                  >
-                    <option value="">Estimez le volume souhaité</option>
-                    <option value="Moins de 50">Moins de 50</option>
-                    <option value="50 à 200">50 à 200</option>
-                    <option value="200 à 500">200 à 500</option>
-                    <option value="500 à 1 000">500 à 1 000</option>
-                    <option value="Plus de 1 000">Plus de 1 000</option>
-                  </select>
-                  <span class="bos-form-error" id="error_bos_volume_ia" data-error="bos_volume_ia" role="alert"></span>
-                </div>
-
-                <!-- Plateformes à connecter -->
-                <div class="bos-form-group bos-form__grid--full">
-                  <fieldset style="border:none;padding:0;margin:0;">
-                    <legend class="bos-form-label">
-                      Plateformes souhaitées <span class="bos-form-label__opt">(plusieurs choix possibles)</span>
-                    </legend>
-                    <div class="bos-checkbox-group" style="margin-top:0.5rem;">
-                      <label class="bos-checkbox-label">
-                        <input type="checkbox" name="bos_plateformes[]" value="WhatsApp Business">
-                        <span>💬 WhatsApp Business</span>
-                      </label>
-                      <label class="bos-checkbox-label">
-                        <input type="checkbox" name="bos_plateformes[]" value="Instagram DM">
-                        <span>📸 Instagram (messages directs)</span>
-                      </label>
-                      <label class="bos-checkbox-label">
-                        <input type="checkbox" name="bos_plateformes[]" value="Facebook Messenger">
-                        <span>💙 Facebook Messenger</span>
-                      </label>
-                      <label class="bos-checkbox-label">
-                        <input type="checkbox" name="bos_plateformes[]" value="Email">
-                        <span>📧 E-mail</span>
-                      </label>
-                      <label class="bos-checkbox-label">
-                        <input type="checkbox" name="bos_plateformes[]" value="Autre / à préciser">
-                        <span>🔗 Autre</span>
-                      </label>
-                    </div>
-                  </fieldset>
-                </div>
-
-                <!-- Principale difficulté -->
-                <div class="bos-form-group bos-form__grid--full">
-                  <label class="bos-form-label" for="bos_difficulte">
-                    Votre principale difficulté dans la gestion clients <span aria-hidden="true">*</span>
-                  </label>
-                  <textarea
-                    id="bos_difficulte"
-                    name="bos_difficulte"
-                    class="bos-form-textarea"
-                    placeholder="Ex : Je reçois trop de messages et je ne peux pas tout répondre. Des clients potentiels repartent sans réponse..."
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_difficulte"
-                  ></textarea>
-                  <span class="bos-form-error" id="error_bos_difficulte" data-error="bos_difficulte" role="alert"></span>
-                </div>
-
-                <!-- Budget mensuel -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_budget">
-                    Budget mensuel envisagé
-                    <span class="bos-form-label__opt">(optionnel, pour nous aider à concevoir l'offre)</span>
-                  </label>
-                  <select
-                    id="bos_budget"
-                    name="bos_budget"
-                    class="bos-form-select"
-                    aria-describedby="bos_budget_hint"
-                  >
-                    <option value="">Indiquer une fourchette</option>
-                    <option value="Moins de 200 DH / mois">Moins de 200 DH / mois</option>
-                    <option value="200 à 500 DH / mois">200 à 500 DH / mois</option>
-                    <option value="500 à 1 000 DH / mois">500 à 1 000 DH / mois</option>
-                    <option value="1 000 à 2 000 DH / mois">1 000 à 2 000 DH / mois</option>
-                    <option value="Plus de 2 000 DH / mois">Plus de 2 000 DH / mois</option>
-                    <option value="Je ne sais pas encore">Je ne sais pas encore</option>
-                  </select>
-                  <span id="bos_budget_hint" style="font-size:0.75rem;color:var(--color-text-muted);">Ces fourchettes sont indicatives et ne représentent pas les tarifs définitifs.</span>
-                </div>
-
-                <!-- Type de participation -->
-                <div class="bos-form-group">
-                  <label class="bos-form-label" for="bos_participation">
-                    Type de participation souhaité <span aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="bos_participation"
-                    name="bos_participation"
-                    class="bos-form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="error_bos_participation"
-                  >
-                    <option value="">Choisissez votre type de participation</option>
-                    <option value="Test gratuit (programme pilote)">Test gratuit (programme pilote)</option>
-                    <option value="Test à tarif préférentiel (early adopter)">Test à tarif préférentiel (early adopter)</option>
-                    <option value="Démonstration uniquement">Démonstration uniquement</option>
-                    <option value="Je veux être tenu informé">Je veux être tenu informé</option>
-                  </select>
-                  <span class="bos-form-error" id="error_bos_participation" data-error="bos_participation" role="alert"></span>
-                </div>
-
-                <!-- Consentement -->
-                <div class="bos-form-group bos-form__grid--full">
-                  <div class="bos-consent-group">
-                    <label class="bos-consent-label" for="bos_consentement">
-                      <input
-                        type="checkbox"
-                        id="bos_consentement"
-                        name="bos_consentement"
-                        value="oui"
-                        required
-                        aria-required="true"
-                        aria-describedby="error_bos_consentement"
-                      >
-                      <span>
-                        J'accepte que JHL Solutions traite les informations saisies dans ce formulaire afin de me recontacter dans le cadre du programme de test JHL Business OS. Les données ne seront pas partagées avec des tiers. Consultez notre
-                        <a href="../politique-confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.
-                      </span>
+                  <!-- Nom et prénom (REQUIS) -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_nom">
+                      Votre Nom et Prénom <span class="bos-required-dot">*</span>
                     </label>
-                    <span class="bos-form-error" id="error_bos_consentement" data-error="bos_consentement" role="alert" style="margin-left:1.75rem;"></span>
+                    <input
+                      type="text"
+                      id="bos_nom"
+                      name="bos_nom"
+                      class="bos-form-input"
+                      placeholder="Ex : Karim Bennani"
+                      autocomplete="name"
+                      required
+                      aria-required="true"
+                      aria-describedby="error_bos_nom"
+                    >
+                    <span class="bos-form-error" id="error_bos_nom" data-error="bos_nom" role="alert"></span>
                   </div>
+
+                  <!-- WhatsApp ou Téléphone (CRUCIAL POUR MAROC ADS) -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_whatsapp">
+                      Numéro WhatsApp / Téléphone <span class="bos-required-badge">Recommandé</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="bos_whatsapp"
+                      name="bos_whatsapp"
+                      class="bos-form-input"
+                      placeholder="Ex : 06 12 34 56 78"
+                      autocomplete="tel"
+                    >
+                  </div>
+
+                  <!-- Email (REQUIS) -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_email">
+                      Adresse E-mail professionnelle <span class="bos-required-dot">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="bos_email"
+                      name="bos_email"
+                      class="bos-form-input"
+                      placeholder="Ex : contact@votre-entreprise.ma"
+                      autocomplete="email"
+                      required
+                      aria-required="true"
+                      aria-describedby="error_bos_email"
+                    >
+                    <span class="bos-form-error" id="error_bos_email" data-error="bos_email" role="alert"></span>
+                  </div>
+
+                  <!-- Nom de l'entreprise -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_entreprise">
+                      Nom de votre entreprise / boutique
+                    </label>
+                    <input
+                      type="text"
+                      id="bos_entreprise"
+                      name="bos_entreprise"
+                      class="bos-form-input"
+                      placeholder="Ex : El Nour Store, Agence XYZ..."
+                      autocomplete="organization"
+                    >
+                  </div>
+
+                  <!-- Ville -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_ville">
+                      Votre Ville au Maroc
+                    </label>
+                    <select
+                      id="bos_ville"
+                      name="bos_ville"
+                      class="bos-form-select"
+                    >
+                      <option value="">Sélectionnez votre ville (Optionnel)</option>
+                      <option value="Casablanca">Casablanca</option>
+                      <option value="Rabat">Rabat</option>
+                      <option value="Marrakech">Marrakech</option>
+                      <option value="Tanger">Tanger</option>
+                      <option value="Fès">Fès</option>
+                      <option value="Agadir">Agadir</option>
+                      <option value="Meknès">Meknès</option>
+                      <option value="Oujda">Oujda</option>
+                      <option value="Kénitra">Kénitra</option>
+                      <option value="Tétouan">Tétouan</option>
+                      <option value="Autre">Autre ville</option>
+                    </select>
+                  </div>
+
+                  <!-- Secteur d'activité -->
+                  <div class="bos-form-group">
+                    <label class="bos-form-label" for="bos_secteur">
+                      Secteur d'activité
+                    </label>
+                    <select
+                      id="bos_secteur"
+                      name="bos_secteur"
+                      class="bos-form-select"
+                    >
+                      <option value="">Sélectionnez votre domaine</option>
+                      <option value="Commerce / Vente en ligne">E-commerce / Boutique Instagram</option>
+                      <option value="Services aux entreprises">Services aux entreprises (B2B)</option>
+                      <option value="Immobilier">Immobilier / Promotion</option>
+                      <option value="Santé / Beauté / Salons">Santé / Beauté / Centre médical</option>
+                      <option value="Formation / Coaching">Formation / Éducation</option>
+                      <option value="Restauration / Alimentation">Restauration / Traiteur</option>
+                      <option value="Autre">Autre activité</option>
+                    </select>
+                  </div>
+
+                  <!-- Plateformes à connecter -->
+                  <div class="bos-form-group bos-form__grid--full">
+                    <fieldset style="border:none;padding:0;margin:0;">
+                      <legend class="bos-form-label">
+                        Canaux prioritaires où vous recevez le plus de messages :
+                      </legend>
+                      <div class="bos-checkbox-pills">
+                        <label class="bos-pill-label">
+                          <input type="checkbox" name="bos_plateformes[]" value="WhatsApp Business" checked>
+                          <span>💬 WhatsApp Business</span>
+                        </label>
+                        <label class="bos-pill-label">
+                          <input type="checkbox" name="bos_plateformes[]" value="Instagram DM" checked>
+                          <span>📸 Instagram DM</span>
+                        </label>
+                        <label class="bos-pill-label">
+                          <input type="checkbox" name="bos_plateformes[]" value="Facebook Messenger">
+                          <span>💙 Facebook Messenger</span>
+                        </label>
+                        <label class="bos-pill-label">
+                          <input type="checkbox" name="bos_plateformes[]" value="Email">
+                          <span>📧 E-mail</span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <!-- Bloc accordéon ou champs optionnels (volume, etc) -->
+                  <div class="bos-form-group bos-form__grid--full">
+                    <label class="bos-form-label" for="bos_difficulte">
+                      Quel est votre plus grand défi actuellement ? <span class="bos-form-label__opt">(Optionnel)</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="bos_difficulte"
+                      name="bos_difficulte"
+                      class="bos-form-input"
+                      placeholder="Ex : Trop de messages le soir, réponses trop lentes, perte de ventes..."
+                    >
+                  </div>
+
+                  <!-- Valeurs cachées par défaut pour compatibilité analytics & backend -->
+                  <input type="hidden" name="bos_volume_mensuel" value="150 à 500">
+                  <input type="hidden" name="bos_volume_ia" value="200 à 500">
+                  <input type="hidden" name="bos_budget" value="À définir">
+                  <input type="hidden" name="bos_participation" value="Test gratuit (programme pilote)">
+
+                  <!-- Consentement simplifié -->
+                  <div class="bos-form-group bos-form__grid--full">
+                    <div class="bos-consent-group">
+                      <label class="bos-consent-label" for="bos_consentement">
+                        <input
+                          type="checkbox"
+                          id="bos_consentement"
+                          name="bos_consentement"
+                          value="oui"
+                          checked
+                          required
+                          aria-required="true"
+                          aria-describedby="error_bos_consentement"
+                        >
+                        <span>
+                          J'accepte d'être contacté par l'équipe JHL Solutions pour tester l'assistant en avant-première. Données strictement confidentielles.
+                        </span>
+                      </label>
+                      <span class="bos-form-error" id="error_bos_consentement" data-error="bos_consentement" role="alert" style="margin-left:1.75rem;"></span>
+                    </div>
+                  </div>
+
+                </div><!-- /.bos-form__grid -->
+
+                <!-- Bouton de soumission irrésistible -->
+                <button
+                  type="submit"
+                  class="btn btn--primary btn--large bos-form-submit bos-btn-cta-giant"
+                  id="bosFormSubmitBtn"
+                  aria-label="Activer mon essai pilote gratuit"
+                >
+                  <span>Demander mon accès pilote gratuit</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+
+                <div class="bos-form-trust-badges">
+                  <span>🔒 Vos données restent 100% privées</span>
+                  <span>⚡ Réponse sous 24h</span>
+                  <span>🇲🇦 Équipe basée à Casablanca</span>
                 </div>
 
               </div><!-- /.bos-form__fields -->
-
-              <!-- Bouton de soumission -->
-              <button
-                type="submit"
-                class="btn btn--primary btn--large bos-form-submit"
-                id="bosFormSubmitBtn"
-                aria-label="Soumettre ma demande de participation au programme de test"
-              >
-                Soumettre ma demande de test
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-
-            </div><!-- /.bos-form__fields -->
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -1173,76 +1065,20 @@
   </main>
 
   <!-- ============================================
-       FOOTER
+       FOOTER MINIMALISTE LANDING PAGE (SANS DISTRACTION)
        ============================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="bos-minimal-footer" role="contentinfo">
     <div class="container">
-      <div class="footer__grid">
-        <!-- Colonne 1: À propos -->
-        <div class="footer__column">
-          <h3 class="footer__title">JHL Solutions</h3>
-          <p class="footer__description">
-            Agence digitale marocaine spécialisée en création de sites web, référencement SEO, marketing digital et solutions logicielles pour entreprises.
-          </p>
-          <div class="footer__social">
-            <a href="https://www.facebook.com/jhl.solution/" target="_blank" rel="noopener" aria-label="Suivre JHL sur Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/jhlsolution/" target="_blank" rel="noopener" aria-label="Suivre JHL sur Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Colonne 2: Services -->
-        <div class="footer__column">
-          <h3 class="footer__title">Services</h3>
-          <ul class="footer__links" role="list">
-            <li><a href="../services/creation-site-web.html">Création Site Web</a></li>
-            <li><a href="../services/referencement-seo.html">Référencement SEO</a></li>
-            <li><a href="../services/marketing-digital.html">Marketing Digital</a></li>
-            <li><a href="../services/maintenance-web.html">Maintenance Web</a></li>
-          </ul>
-        </div>
-
-        <!-- Colonne 3: Produits -->
-        <div class="footer__column">
-          <h3 class="footer__title">Produits</h3>
-          <ul class="footer__links" role="list">
-            <li><a href="../solutions/erp.html">ERP Complet</a></li>
-            <li><a href="index.html"><strong>Business OS</strong> <span class="bos-nav-badge">BÊTA</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Colonne 4: Contact -->
-        <div class="footer__column">
-          <h3 class="footer__title">Contact</h3>
-          <ul class="footer__links" role="list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              <a href="tel:+212667246440">+212 667 246 440</a>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:contact@jhl.ma">contact@jhl.ma</a>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Casablanca, Maroc
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="footer__bottom">
-        <p class="footer__copyright">
-          Copyright © JHL Solutions 2026 — Tous droits réservés
+      <div class="bos-minimal-footer__inner">
+        <p class="bos-minimal-footer__copy">
+          © 2026 JHL Solutions Casablanca • Solution propulsée par l'IA pour entreprises marocaines.
         </p>
-        <div class="footer__legal">
-          <a href="../mentions-legales.html">Mentions légales</a>
-          <span aria-hidden="true">•</span>
-          <a href="../politique-confidentialite.html">Confidentialité</a>
+        <div class="bos-minimal-footer__links">
+          <a href="../mentions-legales.html" target="_blank" rel="noopener">Mentions Légales</a>
+          <span>•</span>
+          <a href="../politique-confidentialite.html" target="_blank" rel="noopener">Politique de Confidentialité</a>
+          <span>•</span>
+          <a href="https://wa.me/212667246440" target="_blank" rel="noopener">Support Direct</a>
         </div>
       </div>
     </div>
@@ -1251,8 +1087,8 @@
   <!-- Scripts JHL.ma existants -->
   <script src="../assets/js/main.js" defer></script>
 
-  <!-- Script spécifique Business OS -->
-  <script src="business-os.js" defer></script>
+  <!-- Script spécifique Business OS (v=2 pour forcer rechargement sans cache) -->
+  <script src="business-os.js?v=2" defer></script>
 
 </body>
 </html>

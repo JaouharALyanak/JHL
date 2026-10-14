@@ -1,0 +1,20 @@
+[
+    {
+        "id": "bos_6acf7bf5345099.00992576",
+        "date": "2026-10-14 14:56:21",
+        "nom": "Karim Test",
+        "entreprise": "Non indiqué",
+        "email": "karim@jhl.ma",
+        "whatsapp": "Non indiqué",
+        "ville": "Non précisée",
+        "secteur": "Non précisé",
+        "volume_mensuel": "Non précisé",
+        "plateformes": "Non indiqué",
+        "volume_ia": "Non précisé",
+        "difficulte": "Non précisée",
+        "budget": "Non indiqué",
+        "participation": "Test gratuit (programme pilote)",
+        "ip": "127.0.0.1",
+        "user_agent": "curl\/8.21.0"
+    }
+]

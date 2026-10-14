@@ -30,11 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // ============================================
 $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
 
-if (strpos($contentType, 'application/json') !== false) {
-    $json = file_get_contents('php://input');
-    $data = json_decode($json, true) ?: [];
+// Lire php://input en priorité si présent, sinon $_POST
+$rawInput = file_get_contents('php://input');
+$jsonDecoded = !empty($rawInput) ? json_decode($rawInput, true) : null;
+
+if (is_array($jsonDecoded)) {
+    $data = $jsonDecoded;
 } else {
-    // FormData (multipart ou application/x-www-form-urlencoded)
     $data = $_POST;
 }
 
@@ -49,61 +51,27 @@ if (!empty($data['_hp_business_os'])) {
 }
 
 // ============================================
-// VALIDATION CÔTÉ SERVEUR
+// VALIDATION CÔTÉ SERVEUR (Frictionless pour Ads)
+// Seuls le Nom, l'Email et le Consentement sont strictement requis
+// Les autres champs sont optionnels pour maximiser les conversions Ads
 // ============================================
 $errors = [];
 
-// Nom et prénom
+// Nom et prénom (requis)
 $nom = trim($data['bos_nom'] ?? '');
 if (strlen($nom) < 2) {
     $errors['bos_nom'] = 'Veuillez indiquer votre nom et prénom.';
 }
 
-// Email
+// Email (requis)
 $email = trim($data['bos_email'] ?? '');
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['bos_email'] = 'Veuillez entrer une adresse e-mail valide.';
 }
 
-// Ville
-$ville = trim($data['bos_ville'] ?? '');
-if (empty($ville)) {
-    $errors['bos_ville'] = 'Veuillez indiquer votre ville.';
-}
-
-// Secteur
-$secteur = trim($data['bos_secteur'] ?? '');
-if (empty($secteur)) {
-    $errors['bos_secteur'] = 'Veuillez sélectionner votre secteur d\'activité.';
-}
-
-// Volume mensuel
-$volumeMensuel = trim($data['bos_volume_mensuel'] ?? '');
-if (empty($volumeMensuel)) {
-    $errors['bos_volume_mensuel'] = 'Veuillez indiquer un volume approximatif.';
-}
-
-// Volume IA
-$volumeIa = trim($data['bos_volume_ia'] ?? '');
-if (empty($volumeIa)) {
-    $errors['bos_volume_ia'] = 'Veuillez indiquer un volume approximatif.';
-}
-
-// Difficulté
-$difficulte = trim($data['bos_difficulte'] ?? '');
-if (strlen($difficulte) < 5) {
-    $errors['bos_difficulte'] = 'Veuillez décrire brièvement votre principale difficulté.';
-}
-
-// Participation
-$participation = trim($data['bos_participation'] ?? '');
-if (empty($participation)) {
-    $errors['bos_participation'] = 'Veuillez choisir votre type de participation.';
-}
-
-// Consentement
-$consentement = trim($data['bos_consentement'] ?? '');
-if ($consentement !== 'oui') {
+// Consentement (requis mais tolérant aux formats navigateur: oui, on, 1, true)
+$consentVal = strtolower(trim((string)($data['bos_consentement'] ?? 'oui')));
+if (!in_array($consentVal, ['oui', 'on', '1', 'true', 'yes'], true)) {
     $errors['bos_consentement'] = 'Votre consentement est requis.';
 }
 
@@ -113,6 +81,18 @@ if (!empty($errors)) {
     echo json_encode(['success' => false, 'errors' => $errors]);
     exit;
 }
+
+// Champs qualificatifs optionnels (sauvegardés s'ils sont fournis)
+$entreprise    = trim($data['bos_entreprise']      ?? 'Non indiqué');
+$whatsapp      = trim($data['bos_whatsapp']        ?? 'Non indiqué');
+$ville         = trim($data['bos_ville']           ?? 'Non précisée');
+$secteur       = trim($data['bos_secteur']         ?? 'Non précisé');
+$volumeMensuel = trim($data['bos_volume_mensuel']  ?? 'Non précisé');
+$volumeIa      = trim($data['bos_volume_ia']       ?? 'Non précisé');
+$plateformes   = trim($data['bos_plateformes']     ?? 'Non spécifié');
+$difficulte    = trim($data['bos_difficulte']      ?? 'Non précisée');
+$budget        = trim($data['bos_budget']          ?? 'Non précisé');
+$participation = trim($data['bos_participation']   ?? 'Test gratuit (programme pilote)');
 
 // ============================================
 // DONNÉES OPTIONNELLES
