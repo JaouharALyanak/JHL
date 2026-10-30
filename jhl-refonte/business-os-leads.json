@@ -16,5 +16,26 @@
         "participation": "Test gratuit (programme pilote)",
         "ip": "127.0.0.1",
         "user_agent": "curl\/8.21.0"
+    },
+    {
+        "id": "bos_6ad0bb0ac9f276.78043908",
+        "date": "2026-10-15 13:37:46",
+        "nom": "Karim Test",
+        "entreprise": "Test Store Casablanca",
+        "email": "karim.test@example.ma",
+        "whatsapp": "0612345678",
+        "ville": "Casablanca",
+        "secteur": "E-commerce",
+        "taille_equipe": "Non précisée",
+        "volume_mensuel": "Non précisé",
+        "volume_ia": "Non précisé",
+        "plateformes": "Non spécifié",
+        "fonctions_prioritaires": "Non spécifié",
+        "difficulte": "Non précisée",
+        "budget": "Non précisé",
+        "preference": "Démonstration privée & test pilote",
+        "participation": "Démonstration privée & test pilote",
+        "ip": "127.0.0.1",
+        "user_agent": "Mozilla\/5.0 (Windows NT; Windows NT 10.0; fr-FR) WindowsPowerShell\/5.1.26100.9711"
     }
 ]

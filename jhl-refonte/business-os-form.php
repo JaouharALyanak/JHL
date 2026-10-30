@@ -83,24 +83,19 @@ if (!empty($errors)) {
 }
 
 // Champs qualificatifs optionnels (sauvegardés s'ils sont fournis)
-$entreprise    = trim($data['bos_entreprise']      ?? 'Non indiqué');
-$whatsapp      = trim($data['bos_whatsapp']        ?? 'Non indiqué');
-$ville         = trim($data['bos_ville']           ?? 'Non précisée');
-$secteur       = trim($data['bos_secteur']         ?? 'Non précisé');
-$volumeMensuel = trim($data['bos_volume_mensuel']  ?? 'Non précisé');
-$volumeIa      = trim($data['bos_volume_ia']       ?? 'Non précisé');
-$plateformes   = trim($data['bos_plateformes']     ?? 'Non spécifié');
-$difficulte    = trim($data['bos_difficulte']      ?? 'Non précisée');
-$budget        = trim($data['bos_budget']          ?? 'Non précisé');
-$participation = trim($data['bos_participation']   ?? 'Test gratuit (programme pilote)');
-
-// ============================================
-// DONNÉES OPTIONNELLES
-// ============================================
-$entreprise  = trim($data['bos_entreprise'] ?? 'Non indiqué');
-$whatsapp    = trim($data['bos_whatsapp']   ?? 'Non indiqué');
-$plateformes = trim($data['bos_plateformes'] ?? 'Non indiqué');
-$budget      = trim($data['bos_budget']      ?? 'Non indiqué');
+$entreprise             = trim($data['bos_entreprise']             ?? 'Non indiqué');
+$whatsapp               = trim($data['bos_whatsapp']               ?? 'Non indiqué');
+$ville                  = trim($data['bos_ville']                  ?? 'Non précisée');
+$secteur                = trim($data['bos_secteur']                ?? 'Non précisé');
+$tailleEquipe           = trim($data['bos_taille_equipe']          ?? 'Non précisée');
+$volumeMensuel          = trim($data['bos_volume_mensuel']         ?? 'Non précisé');
+$volumeIa               = trim($data['bos_volume_ia']              ?? 'Non précisé');
+$plateformes            = trim($data['bos_plateformes']            ?? 'Non spécifié');
+$fonctionsPrioritaires  = trim($data['bos_fonctions_prioritaires'] ?? 'Non spécifié');
+$difficulte             = trim($data['bos_difficulte']             ?? 'Non précisée');
+$budget                 = trim($data['bos_budget']                 ?? 'Non précisé');
+$preference             = trim($data['bos_preference']             ?? $data['bos_participation'] ?? 'Démonstration privée & test pilote');
+$participation          = $preference;
 
 // ============================================
 // SAUVEGARDE JSON (backup fiable)
@@ -114,22 +109,25 @@ if (file_exists($leadsFile)) {
 }
 
 $newLead = [
-    'id'              => uniqid('bos_', true),
-    'date'            => date('Y-m-d H:i:s'),
-    'nom'             => $nom,
-    'entreprise'      => $entreprise,
-    'email'           => $email,
-    'whatsapp'        => $whatsapp,
-    'ville'           => $ville,
-    'secteur'         => $secteur,
-    'volume_mensuel'  => $volumeMensuel,
-    'plateformes'     => $plateformes,
-    'volume_ia'       => $volumeIa,
-    'difficulte'      => $difficulte,
-    'budget'          => $budget,
-    'participation'   => $participation,
-    'ip'              => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
-    'user_agent'      => substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 150)
+    'id'                      => uniqid('bos_', true),
+    'date'                    => date('Y-m-d H:i:s'),
+    'nom'                     => $nom,
+    'entreprise'              => $entreprise,
+    'email'                   => $email,
+    'whatsapp'                => $whatsapp,
+    'ville'                   => $ville,
+    'secteur'                 => $secteur,
+    'taille_equipe'           => $tailleEquipe,
+    'volume_mensuel'          => $volumeMensuel,
+    'volume_ia'               => $volumeIa,
+    'plateformes'             => $plateformes,
+    'fonctions_prioritaires'  => $fonctionsPrioritaires,
+    'difficulte'              => $difficulte,
+    'budget'                  => $budget,
+    'preference'              => $preference,
+    'participation'           => $participation,
+    'ip'                      => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+    'user_agent'              => substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 150)
 ];
 
 $leads[] = $newLead;
@@ -185,11 +183,13 @@ $htmlMessage = '
 
             <!-- Activité -->
             <div class="section">
-                <div class="section-title">🏢 Activité</div>
+                <div class="section-title">🏢 Activité & Équipe</div>
                 <div class="field"><span class="field-label">Secteur</span><span class="field-value">' . htmlspecialchars($secteur) . '</span></div>
+                <div class="field"><span class="field-label">Taille équipe</span><span class="field-value">' . htmlspecialchars($tailleEquipe) . '</span></div>
                 <div class="field"><span class="field-label">Demandes / mois</span><span class="field-value">' . htmlspecialchars($volumeMensuel) . '</span></div>
                 <div class="field"><span class="field-label">Volume IA souhaité</span><span class="field-value">' . htmlspecialchars($volumeIa) . '</span></div>
                 <div class="field"><span class="field-label">Plateformes souhaitées</span><span class="field-value">' . htmlspecialchars($plateformes) . '</span></div>
+                <div class="field"><span class="field-label">Fonctions prioritaires</span><span class="field-value">' . htmlspecialchars($fonctionsPrioritaires) . '</span></div>
                 <div class="field"><span class="field-label">Budget mensuel</span><span class="field-value">' . htmlspecialchars($budget) . '</span></div>
             </div>
 
@@ -218,19 +218,20 @@ $htmlMessage = '
 ';
 
 // ============================================
-// ENVOI SMTP (même config que contact.php)
+// ENVOI SMTP (Hostinger SSL port 465) + Fallback mail()
 // ============================================
 $emailSent = false;
+$emailError = null;
 $smtpDebug = [];
 
 try {
-    $smtp_host     = 'smtp.hostinger.com';
-    $smtp_port     = 465;
-    $smtp_username = 'smtp@jhl.ma';
-    $smtp_password = '8i*BV1ZxjI';
-    $smtp_from     = 'smtp@jhl.ma';
+    $smtp_host      = 'smtp.hostinger.com';
+    $smtp_port      = 465;
+    $smtp_username  = 'smtp@jhl.ma';
+    $smtp_password  = '8i*BV1ZxjI';
+    $smtp_from      = 'smtp@jhl.ma';
     $smtp_from_name = 'JHL Business OS';
-    $smtp_to       = 'contact@jhl.ma';
+    $smtp_to        = 'contact@jhl.ma';
 
     $context = stream_context_create([
         'ssl' => [
@@ -240,11 +241,11 @@ try {
         ]
     ]);
 
-    $smtp = stream_socket_client(
+    $smtp = @stream_socket_client(
         "ssl://{$smtp_host}:{$smtp_port}",
         $errno,
         $errstr,
-        30,
+        15,
         STREAM_CLIENT_CONNECT,
         $context
     );
@@ -254,27 +255,31 @@ try {
     }
 
     // Lire banner
-    fgets($smtp, 512);
+    $banner = fgets($smtp, 512);
 
-    // Helper SMTP
-    $smtpSend = function ($command) use ($smtp, &$smtpDebug) {
+    // Helper SMTP avec vérification des réponses
+    $smtpSend = function ($command, $expectedCode = null) use ($smtp, &$smtpDebug) {
         fwrite($smtp, $command . "\r\n");
         $fullResponse = '';
         do {
             $line = fgets($smtp, 512);
             $fullResponse .= $line;
-            $smtpDebug[] = 'R: ' . trim($line);
+            $smtpDebug[] = trim($line);
         } while (isset($line[3]) && $line[3] === '-');
+
+        if ($expectedCode !== null && substr($fullResponse, 0, 3) !== (string)$expectedCode) {
+            throw new Exception("Erreur SMTP sur [{$command}] : " . trim($fullResponse));
+        }
         return $fullResponse;
     };
 
-    $smtpSend("EHLO jhl.ma");
-    $smtpSend("AUTH LOGIN");
-    $smtpSend(base64_encode($smtp_username));
-    $smtpSend(base64_encode($smtp_password));
-    $smtpSend("MAIL FROM: <{$smtp_from}>");
-    $smtpSend("RCPT TO: <{$smtp_to}>");
-    $smtpSend("DATA");
+    $smtpSend("EHLO jhl.ma", 250);
+    $smtpSend("AUTH LOGIN", 334);
+    $smtpSend(base64_encode($smtp_username), 334);
+    $smtpSend(base64_encode($smtp_password), 235);
+    $smtpSend("MAIL FROM: <{$smtp_from}>", 250);
+    $smtpSend("RCPT TO: <{$smtp_to}>", 250);
+    $smtpSend("DATA", 354);
 
     $mail  = "From: {$smtp_from_name} <{$smtp_to}>\r\n";
     $mail .= "To: <{$smtp_to}>\r\n";
@@ -288,24 +293,57 @@ try {
     $mail .= "\r\n.\r\n";
 
     fwrite($smtp, $mail);
-    fgets($smtp, 512);
-    $smtpSend("QUIT");
+    $dataResponse = fgets($smtp, 512);
+    $smtpDebug[] = 'DATA: ' . trim($dataResponse);
+
+    if (substr($dataResponse, 0, 3) !== '250') {
+        throw new Exception("Serveur Hostinger a refusé l'envoi : " . trim($dataResponse));
+    }
+
+    $smtpSend("QUIT", 221);
     fclose($smtp);
 
     $emailSent = true;
 
 } catch (Exception $e) {
-    error_log('BOS SMTP Error: ' . $e->getMessage());
-    $emailSent = false;
+    $emailError = $e->getMessage();
+    error_log('BOS SMTP Error: ' . $emailError);
+
+    // Tentative de fallback via PHP native mail()
+    try {
+        $nativeHeaders  = "MIME-Version: 1.0\r\n";
+        $nativeHeaders .= "Content-Type: text/html; charset=UTF-8\r\n";
+        $nativeHeaders .= "From: JHL Business OS <contact@jhl.ma>\r\n";
+        $nativeHeaders .= "Reply-To: {$email}\r\n";
+        $nativeHeaders .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+
+        $fallbackSent = @mail('contact@jhl.ma', $subject, $htmlMessage, $nativeHeaders);
+        if ($fallbackSent) {
+            $emailSent = true;
+            $emailError = null;
+        }
+    } catch (Exception $mailEx) {
+        // Fallback également échoué
+    }
+}
+
+// Log de diagnostic si échec
+if (!$emailSent && $emailError) {
+    @file_put_contents(
+        __DIR__ . '/business-os-mail-debug.log',
+        '[' . date('Y-m-d H:i:s') . '] Échec envoi email lead #' . $newLead['id'] . ' (' . $email . ') : ' . $emailError . "\n",
+        FILE_APPEND
+    );
 }
 
 // ============================================
-// RÉPONSE — toujours succès (données sauvegardées)
+// RÉPONSE JSON (Toujours succès car sauvegardé dans leads.json)
 // ============================================
 echo json_encode([
-    'success'    => true,
-    'message'    => 'Votre demande a bien été enregistrée. Nous vous contacterons prochainement.',
-    'email_sent' => $emailSent,
-    'saved'      => true,
-    'id'         => $newLead['id']
+    'success'     => true,
+    'message'     => 'Votre demande a bien été enregistrée avec succès. Notre équipe vous contactera dans les 24h.',
+    'email_sent'  => $emailSent,
+    'email_error' => $emailError,
+    'saved'       => true,
+    'id'          => $newLead['id']
 ]);
